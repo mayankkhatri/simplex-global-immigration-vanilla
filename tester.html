@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonials Section</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <style>
+      /* --- General Styles --- */
+      body {
+        font-family: Poppins, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        overflow-x: hidden; /* Prevent horizontal scrollbar on body */
+      }
+      .testimonials-section {
+        padding: 40px 20px;
+        max-width: 1500px; /* Increased max-width to 1500px */
+        margin: 0 auto;
+        text-align: left; /* Center align title and subtitle */
+        position: relative; /* Needed for positioning swiper buttons relative to section */
+      }
+      .testimonial-title {
+        color: #e73c30; /* Red color from image */
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 1.5em;
+      }
+      .testimonial-subtitle {
+        color: #001e6b; /* Dark blue color from image */
+        font-weight: bold;
+        font-size: 2em;
+        margin-bottom: 30px;
+      }
+
+      /* --- Swiper Carousel Styles --- */
+      .swiper-container {
+        width: 100%;
+        overflow: hidden; /* Ensure slides don't overflow */
+        position: relative; /* Required for navigation positioning */
+        padding: 20px 0; /* Add vertical padding for navigation */
+        margin: 0 auto; /* Center the swiper within testimonials section */
+        /* max-width: 1500px;  Removed max-width from swiper-container */
+      }
+
+      .swiper-wrapper {
+        display: flex; /* Enable flexbox for layout */
+      }
+
+      .swiper-slide {
+        background: #fff;
+        border: 1px solid #e6e6e6;
+        border-radius: 3px;
+        margin: 0 10px; /* Spacing between slides */
+        box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+        width: 100%; /* Default width for mobile */
+        border-radius: 10px;
+      }
+
+      /* --- Swiper Navigation Styles --- */
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #001e6b; /* Navigation arrow color */
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.8
+        ); /* Semi-transparent white background */
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      }
+
+      .swiper-button-next::after,
+      .swiper-button-prev::after {
+        font-size: 1.2em; /* Adjust arrow size */
+        font-weight: bold;
+      }
+
+      .swiper-button-next:hover,
+      .swiper-button-prev:hover {
+        background-color: rgba(255, 255, 255, 1); /* Solid white on hover */
+      }
+
+      .swiper-button-disabled {
+        opacity: 0.35;
+        cursor: default;
+        pointer-events: none;
+      }
+
+      /* Position the navigation buttons */
+      .swiper-button-next {
+        right: 0px; /* Adjust position from right - set to 0px relative to swiper-container */
+      }
+      .swiper-button-prev {
+        left: 0px; /* Adjust position from left - set to 0px relative to swiper-container */
+      }
+
+      /* --- Instagram Post Styles --- */
+      .instagram-post-header {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+      }
+      .profile-image-container {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 10px;
+        border: 1px solid #dbdbdb; /* Instagram border color */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .profile-image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .profile-info {
+        flex-grow: 1;
+      }
+      .username {
+        font-weight: bold;
+        font-size: 0.9em;
+        color: #262626;
+        line-height: 1.2; /* Adjust line height for better spacing */
+        text-align: left !important;
+      }
+      .location {
+        font-size: 0.8em;
+        color: #8e8e8e;
+        line-height: 1.2; /* Adjust line height for better spacing */
+        text-align: left !important;
+      }
+      .post-options {
+        cursor: pointer;
+        color: #262626;
+      }
+
+      .video-container {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1/1; /* Instagram post aspect ratio */
+        background-color: #ddd; /* Placeholder background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; /* Clip video if it overflows */
+      }
+      .video-container video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Cover container, cropping if needed */
+        display: block;
+      }
+      .unmute-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.7);
+        color: #000;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        display: none; /* Hidden initially */
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        font-size: 0.9em;
+      }
+      .unmute-button i {
+        font-size: 1em;
+      }
+
+      .post-actions {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .left-actions,
+      .right-actions {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+      .action-icon {
+        font-size: 1.5em;
+        cursor: pointer;
+        color: #262626;
+      }
+
+      .post-description {
+        padding: 0 10px 10px 10px;
+        font-size: 0.9em;
+        color: #262626;
+        line-height: 1.4;
+        text-align: left; /* Left align description text */
+      }
+      .description-username {
+        font-weight: bold;
+        margin-right: 5px;
+      }
+      .view-more {
+        color: #8e8e8e;
+        cursor: pointer;
+      }
+
+      .likes-count {
+        padding: 0 10px;
+        font-size: 0.9em;
+        color: #262626;
+        margin-bottom: 5px;
+        text-align: left; /* Left align likes count */
+      }
+
+      /* --- Responsive Styles --- */
+      @media (min-width: 768px) {
+        .swiper-slide {
+          width: calc(
+            33.333% - 20px
+          ); /* For 3 slides visible on desktop - Reverted to 3 slides */
+          margin: 0 10px;
+        }
+        .swiper-container {
+          padding: 20px 0px; /* Removed side padding from swiper container to allow buttons to be fully visible */
+        }
+        .testimonials-section {
+          text-align: left; /* Left align title and subtitle on desktop */
+          padding: 40px 50px; /* Add side padding to testimonials section instead */
+        }
+        .swiper-button-next {
+          right: 20px; /* Adjust position from right relative to testimonials-section padding */
+        }
+        .swiper-button-prev {
+          left: 20px; /* Adjust position from left relative to testimonials-section padding */
+        }
+      }
+      @media (max-width: 767px) {
+        .swiper-slide {
+          margin: 0; /* Smaller margin on mobile */
+        }
+        .swiper-container {
+          padding: 20px 0px; /* Removed side padding from swiper container on mobile too */
+        }
+        .testimonials-section {
+          padding: 40px 20px; /* Keep side padding for testimonials section on mobile */
+        }
+        .swiper-button-next {
+          right: 10px; /* Adjust position from right for mobile */
+        }
+        .swiper-button-prev {
+          left: 10px; /* Adjust position from left for mobile */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="testimonials-section">
+      <h2 class="testimonial-title">
+        <i class="fa-solid fa-plane-departure"></i> Testimonials
+      </h2>
+      <h3 class="testimonial-subtitle">Hear it directly from our clients</h3>
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div class="instagram-post">
+              <div class="instagram-post-header">
+                <div class="profile-image-container">
+                  <img
+                    src="https://i.postimg.cc/HnWk1NkM/clipboard-image-1740656306.png"
+                    alt="Profile"
+                    onerror="this.style.display='none'"
+                  />
+                </div>
+                <div class="profile-info">
+                  <div class="username">Vikas Sharma</div>
+                  <div class="location">Dundee, Scotland</div>
+                </div>
+                <div class="post-options">
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+              </div>
+              <div class="video-container">
+                <video muted loop playsinline controls>
+                  <source
+                    src="https://github.com/mayankkhatri/site-assets/raw/refs/heads/main/simplex/viskas%20visa.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+                <div class="unmute-button">
+                  <i class="fas fa-volume-mute"></i> <span>Tap to unmute</span>
+                </div>
+              </div>
+              <div class="post-actions">
+                <div class="left-actions">
+                  <i class="far fa-heart action-icon"></i>
+                  <i class="far fa-comment action-icon"></i>
+                  <i class="far fa-paper-plane action-icon"></i>
+                </div>
+                <div class="right-actions">
+                  <i class="far fa-bookmark action-icon"></i>
+                </div>
+              </div>
+              <div class="likes-count">7453 likes</div>
+              <div class="post-description">
+                <span class="description-username">Vikas</span>
+                Thanks to simplex...
+                <span class="view-more">more</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="instagram-post">
+              <div class="instagram-post-header">
+                <div class="profile-image-container">
+                  <img
+                    src="https://i.postimg.cc/jdnWzWnp/clipboard-image-1740719213.webp"
+                    alt="Profile"
+                    onerror="this.style.display='none'"
+                  />
+                </div>
+                <div class="profile-info">
+                  <div class="username">Faith Fernandes</div>
+                  <div class="location">Toronto, Canada</div>
+                </div>
+                <div class="post-options">
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+              </div>
+              <div class="video-container">
+                <video muted loop playsinline controls>
+                  <source
+                    src="https://github.com/mayankkhatri/site-assets/raw/refs/heads/main/simplex/Faith%20Fernandes.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+                <div class="unmute-button">
+                  <i class="fas fa-volume-mute"></i> <span>Tap to unmute</span>
+                </div>
+              </div>
+              <div class="post-actions">
+                <div class="left-actions">
+                  <i class="far fa-heart action-icon"></i>
+                  <i class="far fa-comment action-icon"></i>
+                  <i class="far fa-paper-plane action-icon"></i>
+                </div>
+                <div class="right-actions">
+                  <i class="far fa-bookmark action-icon"></i>
+                </div>
+              </div>
+              <div class="likes-count">5214 likes</div>
+              <div class="post-description">
+                <span class="description-username">Faith</span>Amazing service
+                by team Simplex
+                <span class="view-more">more</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div class="instagram-post">
+              <div class="instagram-post-header">
+                <div class="profile-image-container">
+                  <img
+                    src="https://i.postimg.cc/NG6GY1Tf/clipboard-image-1740719556.webp"
+                    alt="Profile"
+                    onerror="this.style.display='none'"
+                  />
+                </div>
+                <div class="profile-info">
+                  <div class="username">Afnaan Khan</div>
+                  <div class="location">Vancouver, Canada</div>
+                </div>
+                <div class="post-options">
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+              </div>
+              <div class="video-container">
+                <video muted loop playsinline controls>
+                  <source
+                    src="https://github.com/mayankkhatri/site-assets/raw/refs/heads/main/simplex/Afnaan%20Khan.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+                <div class="unmute-button">
+                  <i class="fas fa-volume-mute"></i> <span>Tap to unmute</span>
+                </div>
+              </div>
+              <div class="post-actions">
+                <div class="left-actions">
+                  <i class="far fa-heart action-icon"></i>
+                  <i class="far fa-comment action-icon"></i>
+                  <i class="far fa-paper-plane action-icon"></i>
+                </div>
+                <div class="right-actions">
+                  <i class="far fa-bookmark action-icon"></i>
+                </div>
+              </div>
+              <div class="likes-count">9876 likes</div>
+              <div class="post-description">
+                <span class="description-username">Afnaan</span> Best
+                immigration experience ever!
+                <span class="view-more">more</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <div class="instagram-post">
+              <div class="instagram-post-header">
+                <div class="profile-image-container">
+                  <img
+                    src="https://i.postimg.cc/PJ3Rh3QR/clipboard-image-1740719807.webp"
+                    alt="Profile"
+                    onerror="this.style.display='none'"
+                  />
+                </div>
+                <div class="profile-info">
+                  <div class="username">Zuberia Sheikh</div>
+                  <div class="location">Berlin, Germany</div>
+                </div>
+                <div class="post-options">
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+              </div>
+              <div class="video-container">
+                <video muted loop playsinline controls>
+                  <source
+                    src="https://github.com/mayankkhatri/site-assets/raw/refs/heads/main/simplex/Zuberia%20Sheikh.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+                <div class="unmute-button">
+                  <i class="fas fa-volume-mute"></i> <span>Tap to unmute</span>
+                </div>
+              </div>
+              <div class="post-actions">
+                <div class="left-actions">
+                  <i class="far fa-heart action-icon"></i>
+                  <i class="far fa-comment action-icon"></i>
+                  <i class="far fa-paper-plane action-icon"></i>
+                </div>
+                <div class="right-actions">
+                  <i class="far fa-bookmark action-icon"></i>
+                </div>
+              </div>
+              <div class="likes-count">6321 likes</div>
+              <div class="post-description">
+                <span class="description-username">Zuberia</span>I highly
+                recommend Simplex for
+                <span class="view-more">more</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="swiper-slide">
+            <div class="instagram-post">
+              <div class="instagram-post-header">
+                <div class="profile-image-container">
+                  <img
+                    src="https://i.postimg.cc/d1gHDkyq/clipboard-image-1740718357.webp"
+                    alt="Profile"
+                    onerror="this.style.display='none'"
+                  />
+                </div>
+                <div class="profile-info">
+                  <div class="username">Riya Malhotra</div>
+                  <div class="location">Germany</div>
+                </div>
+                <div class="post-options">
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+              </div>
+              <div class="video-container">
+                <video muted loop playsinline controls>
+                  <source
+                    src="https://github.com/mayankkhatri/site-assets/raw/refs/heads/main/simplex/riya%20malhotra.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+                <div class="unmute-button">
+                  <i class="fas fa-volume-mute"></i> <span>Tap to unmute</span>
+                </div>
+              </div>
+              <div class="post-actions">
+                <div class="left-actions">
+                  <i class="far fa-heart action-icon"></i>
+                  <i class="far fa-comment action-icon"></i>
+                  <i class="far fa-paper-plane action-icon"></i>
+                </div>
+                <div class="right-actions">
+                  <i class="far fa-bookmark action-icon"></i>
+                </div>
+              </div>
+              <div class="likes-count">3456 likes</div>
+              <div class="post-description">
+                <span class="description-username">Riya</span> Amazing
+                consultancy!
+                <span class="view-more">more</span>
+              </div>
+            </div>
+          </div>
+          <!-- Last space -->
+          <div class="swiper-slide slide-six"></div>
+        </div>
+        <!-- Navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      // --- Initialize Swiper ---
+      const swiper = new Swiper(".swiper-container", {
+        slidesPerView: 1, // Default to 1 slide for mobile
+        spaceBetween: 10,
+        loop: false, // Disable loop
+        centeredSlides: true, // Center slides for mobile
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+          disabledClass: "swiper-button-disabled", // Class to style disabled buttons
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 3, // 3 slides for desktop - Reverted to 3 slides
+            spaceBetween: 30,
+            centeredSlides: false, // Disable center slide for desktop
+          },
+        },
+      });
+
+      // --- Video Autoplay and Mute Control ---
+      const videoContainers = document.querySelectorAll(".video-container");
+      let currentlyUnmutedVideo = null; // Track the currently unmuted video
+
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            const video = entry.target.querySelector("video");
+            const unmuteButton = entry.target.querySelector(".unmute-button");
+
+            if (entry.isIntersecting) {
+              video.play().catch((error) => {
+                // Autoplay was prevented. May happen in some browsers/settings.
+                console.log("Autoplay prevented:", error);
+              });
+              if (video.muted) {
+                // Only show unmute button if video starts muted
+                unmuteButton.style.display = "flex";
+              } else {
+                unmuteButton.style.display = "none";
+              }
+            } else {
+              video.pause();
+              unmuteButton.style.display = "none"; // Hide unmute button when not in view
+              if (video !== currentlyUnmutedVideo) {
+                video.muted = true; // Mute when out of view unless it's the currently unmuted one
+              }
+            }
+          });
+        },
+        {
+          threshold: 0.6, // Trigger when 60% of video is visible
+        }
+      );
+
+      videoContainers.forEach((container) => {
+        observer.observe(container);
+      });
+
+      // --- Unmute Button Functionality ---
+      videoContainers.forEach((container) => {
+        const video = container.querySelector("video");
+        const unmuteButton = container.querySelector(".unmute-button");
+
+        unmuteButton.addEventListener("click", () => {
+          if (currentlyUnmutedVideo && currentlyUnmutedVideo !== video) {
+            currentlyUnmutedVideo.muted = true; // Mute previously unmuted video
+            const prevUnmuteButton =
+              currentlyUnmutedVideo.parentElement.querySelector(
+                ".unmute-button"
+              );
+            if (prevUnmuteButton) {
+              prevUnmuteButton.innerHTML =
+                '<i class="fas fa-volume-mute"></i> <span>Tap to unmute</span>'; // Reset unmute button text
+            }
+          }
+
+          video.muted = false;
+          currentlyUnmutedVideo = video; // Update currently unmuted video
+          unmuteButton.style.display = "none"; // Hide unmute button after clicking
+
+          unmuteButton.innerHTML =
+            '<i class="fas fa-volume-up"></i> <span>Muted</span>'; // Change text to show it's muted for current video, but it might be misleading in this case. Better to just hide it.
+
+          // Hide unmute button for current video after unmuting, no need to change text and keep it.
+          unmuteButton.style.display = "none";
+        });
+
+        video.addEventListener("play", () => {
+          if (video.muted) {
+            unmuteButton.style.display = "flex";
+          } else {
+            unmuteButton.style.display = "none";
+          }
+        });
+        video.addEventListener("pause", () => {
+          unmuteButton.style.display = "none"; // Hide on pause as well.
+        });
+      });
+    </script>
+  </body>
+</html>
