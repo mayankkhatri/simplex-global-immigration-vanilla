@@ -1379,6 +1379,10 @@ a {
   margin: 1rem;
 }
 
+.cont-wrap {
+  padding: 3rem 0;
+}
+
 .contact-heading {
   text-align: center;
   color: #f94a4b;

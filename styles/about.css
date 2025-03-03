@@ -1,0 +1,251 @@
+/* Global Styles and Resets - [No Changes from previous version] */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.8;
+  color: #333;
+  background-color: #f9f9f9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography - [No Changes from previous version] */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.7rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+p,
+ul {
+  font-size: 1rem;
+  margin-bottom: 1.3rem;
+}
+a {
+  text-decoration: none;
+}
+
+.content {
+  padding-top: 5rem;
+}
+
+/* Layout and Structure - [No Changes from previous version] */
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 4rem;
+}
+
+.page-title-section {
+  text-align: center;
+  padding: 5rem 0;
+  background-color: #fefefe;
+  margin-bottom: 3rem;
+}
+.page-title-section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  color: #002768;
+  margin-top: 0;
+}
+.breadcrumb {
+  color: #777;
+  font-size: 0.9rem;
+}
+.breadcrumb a {
+  color: #002768;
+}
+
+section {
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.03);
+}
+.section-title {
+  margin-bottom: 2rem;
+}
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #002768;
+  margin-bottom: 0.25rem;
+  margin-top: 0;
+}
+
+.about-section .content-grid,
+.process-section .content-grid,
+.expertise-section .content-grid {
+  /* Apply content grid to expertise */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-section .image-col img,
+.process-section .image-col img,
+.expertise-section .image-col img {
+  /* Apply to expertise image */
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.why-choose-us-section .features-grid,
+.vision-section .features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.feature-card {
+  background-color: #fefefe;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.05);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.feature-card i {
+  font-size: 2.5rem;
+  color: #f94a4b;
+  margin-bottom: 1rem;
+  display: block;
+  text-align: center;
+}
+.feature-card h3 {
+  margin-bottom: 0.8rem;
+  text-align: center;
+  color: #002768;
+}
+.feature-card p {
+  font-size: 0.95rem;
+  color: #666;
+  text-align: left;
+}
+
+.contact-cta-section {
+  text-align: center;
+  padding: 4rem 0;
+  background-color: #fefefe;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+.contact-cta-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+.contact-cta-section p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design - [Updated for expertise section] */
+@media (min-width: 762px) {
+  .story-text,
+  .expert-text {
+    font-size: 1.5rem;
+    color: #666;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    padding: 1.5rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+  .nav-links {
+    gap: 1.5rem;
+    margin-right: 1rem;
+  }
+  .page-title-section {
+    padding: 4rem 0;
+  }
+  .page-title-section h1 {
+    font-size: 3rem;
+  }
+  section {
+    padding: 2.5rem;
+  }
+  .about-section .content-grid,
+  .process-section .content-grid,
+  .expertise-section .content-grid {
+    /* Responsive for expertise */
+    grid-template-columns: 1fr;
+  }
+  .expertise-section .image-col {
+    /* Move expertise image below text on smaller screens */
+    order: 1; /* Image comes after text */
+  }
+  .expertise-section .text-col {
+    order: 0; /* Text comes first */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  .nav-links {
+    gap: 1rem;
+    margin-right: 0.5rem;
+  }
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+  .btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  .page-title-section {
+    padding: 3rem 0;
+  }
+  .page-title-section h1 {
+    font-size: 2.5rem;
+  }
+  section {
+    padding: 2rem;
+  }
+  .why-choose-us-section .features-grid,
+  .vision-section .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-cta-section {
+    padding: 3rem 0;
+  }
+  .contact-cta-section h2 {
+    font-size: 2.4rem;
+  }
+}
