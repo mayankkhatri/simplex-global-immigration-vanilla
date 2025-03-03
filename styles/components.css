@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900");
+@import url("https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap");
+
 /*! Header */
 header {
   display: flex;
@@ -15,29 +18,278 @@ header {
 }
 
 .logo img {
-  width: calc(8vh + 5vw + 15px);
+  width: calc(11vh + 6vw + 35px);
 }
 
 nav a {
   margin: 0 calc(1vw);
-  font-size: calc(12px);
+  font-size: calc(0.5rem + 0.5vw);
   color: #696969;
   font-weight: 500;
 }
 
-nav a:nth-child(4) {
+nav a:nth-child(3) {
   color: #f55f5f;
   font-weight: 600;
 }
 
-/* --- For Desktop--- */
+/* Hamburger Menu Styles */
+.hamburger-menu {
+  display: none; /* Hidden on desktop initially */
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  right: 20px; /* Adjust position as needed */
+  transform: translateY(-50%);
+}
 
-@media (min-width: 724px) {
-  nav a {
-    margin: 0 calc(1vw);
-    font-size: calc(1vh + 8px);
-    color: #696969;
-    font-weight: 500;
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #002768;
+  border-radius: 1.5px;
+  margin: 3px 0;
+  transition: transform 0.4s ease, opacity 0.4s ease; /* Add transition for animation */
+}
+
+/* Hamburger to Cross Animation */
+.hamburger-menu.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px); /* Rotate top bar to cross */
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+  opacity: 0; /* Hide the middle bar */
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px); /* Rotate bottom bar to cross */
+}
+
+/* Mobile Styles (Media Query) */
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* Hide navigation menu on mobile by default */
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Position below header */
+    right: 10px;
+    background-color: white; /* Or any background color you prefer */
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    z-index: 9999; /* Ensure it's above other content if needed */
+    border-radius: 15px;
+  }
+
+  .nav.active {
+    display: flex; /* Show navigation menu when active class is added */
+    width: 40%;
+    padding: 1rem 0;
+  }
+
+  .nav a,
+  .nav .services-link {
+    padding: 10px 20px;
+    display: block; /* Make each link full width in mobile nav */
+    margin-bottom: 0; /* Reset margin from desktop styles */
+    font-size: calc(0.8rem + 0.5vw);
+  }
+
+  .hamburger-menu {
+    display: flex; /* Show hamburger menu on mobile */
+  }
+
+  .header .nav {
+    /* Specificity to override inline styles if any */
+    margin-top: 0; /* Reset margin from desktop nav */
+  }
+
+  #contact-a {
+    transform: translateY(0px); /* Reset transform for mobile */
   }
 }
 /*! Header  */
+
+/*! Footer */
+
+/* Modern Footer Styles */
+footer {
+  background-color: #001435; /* Updated background color */
+  color: #ffffff; /* White text for contrast on dark background */
+  padding: 40px 0;
+  border-top: 1px solid #dee2e6;
+  margin-top: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px; /* Spacing between sections */
+  margin-bottom: 30px; /* Spacing for mobile stacking */
+  min-width: 200px; /* Minimum width for sections to prevent too much compression */
+  text-align: center;
+}
+
+.footer-section:last-child {
+  margin-right: 0; /* No right margin on the last section */
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+  display: block; /* To make the link full width if needed */
+}
+
+.footer-logo img {
+  height: 50px; /* Adjusted logo size */
+}
+
+.footer-nav ul,
+.footer-contact ul,
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav li,
+.footer-contact li,
+.footer-social li {
+  margin-bottom: 10px;
+}
+
+.footer-nav a,
+.footer-contact a {
+  color: #ffffff; /* White text for links */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth hover effect */
+  display: block; /* Make links full width for easier clicking */
+  padding: 5px 0;
+  margin: 0;
+}
+
+.footer-nav a:hover,
+.footer-contact a:hover {
+  color: #f8f9fa; /* Light hover color - off-white */
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 15px; /* Spacing between social icons */
+  margin-top: 15px; /* Added margin above social icons */
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #ffffff; /* White icon background */
+  color: #001435;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-social-icon-link:hover {
+  background-color: #f8f9fa; /* Light hover color for icons - off-white */
+  color: #db203f; /* Red hover icon color */
+}
+
+.footer-social-icon {
+  font-size: 1.2rem; /* Adjust icon size */
+}
+
+.footer-copyright {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #f8f9fa; /* Light border for copyright section */
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #f8f9fa; /* Lighter copyright text */
+}
+
+.footer-section h3 {
+  margin-bottom: 25px;
+  font-family: "Afacad", sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center; /* Center align text on smaller screens */
+  }
+  .footer-section {
+    margin-right: 0; /* Remove right margin when stacked */
+    text-align: center; /* Center text in each section on mobile */
+  }
+  .footer-nav,
+  .footer-contact,
+  .footer-social {
+    text-align: center; /* Ensure text is centered within sections on mobile */
+  }
+  .footer-social-icons {
+    justify-content: center; /* Center social icons on mobile */
+  }
+
+  /* Two-column links in mobile for Quick Links and Contact */
+  .footer-nav ul,
+  .footer-contact ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px 20px; /* Reduced gap for mobile */
+    text-align: left; /* Align links to the left within columns */
+    justify-items: start; /* Align items to the start of the grid cell */
+  }
+  .footer-nav li,
+  .footer-contact li {
+    margin-bottom: 0; /* Remove bottom margin for list items in grid */
+  }
+  .footer-nav a,
+  .footer-contact a {
+    padding: 3px 0; /* Adjust padding for links in columns */
+    font-size: 15px;
+  }
+
+  .footer-nav {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .footer-social {
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+}
+
+.footer-contact ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-contact li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-nav ul li {
+  margin: auto;
+}
+/*! Footer */

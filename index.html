@@ -59,17 +59,20 @@
     <header>
       <div class="logo">
         <a href="/index.html" aria-label="Go to homepage">
-          <img
-            src="https://github.com/mayankkhatri/site-assets/blob/main/simplex/Header%20Logo.png?raw=true"
-            alt="Xtasy Media Logo"
-          />
+          <img src="assets/images/Header Logo.png" alt="Xtasy Media Logo" />
         </a>
       </div>
-      <nav>
-        <a href="/about.html">About</a>
-        <a href="/services.html">Services</a>
-        <a href="/admissions.html">Immigration</a>
-        <a href="/contact.html">Contact</a>
+
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <nav class="nav">
+        <a href="about.html">About Us</a>
+        <a href="immigrate.html">Immigrate</a>
+        <a href="contact.html" id="contact-a">Contact</a>
       </nav>
     </header>
     <!--! Header -->
@@ -84,15 +87,21 @@
             class="illustrative-bg"
           />
           <div class="passport-container">
-            <img
-              src="https://i.postimg.cc/mkYGdtJz/image.png"
-              alt="Passport and Glasses"
-            />
+            <video
+              autoplay
+              muted
+              loop
+              src="assets/content/home vid.mp4"
+            ></video>
           </div>
         </div>
         <div class="text-section">
           <div class="section-title-simplex">
-            <i class="ri-plane-fill"></i>
+            <img
+              src="assets/images/favicon.ico"
+              alt="Simplex Global Immigration Logo"
+              class="simpl-ico"
+            />
             SIMPLEX GLOBAL IMMIGRATION
           </div>
           <h1 class="main-heading">
@@ -315,9 +324,9 @@
         </h2>
         <p class="section-title-desc">
           Experience a transformative journey with our expert team. At
-          <strong>Simplex Global Immigration</strong>, our trusted consultants
-          provide personalized guidance for a seamless immigration process,
-          helping you achieve your goals with confidence.
+          <strong style="color: #f94a4b">Simplex Global Immigration</strong>,
+          our trusted consultants provide personalized guidance for a seamless
+          immigration process, helping you achieve your goals with confidence.
         </p>
         <!-- Continent Filter -->
         <div class="continent-filter" id="continentFilter">
@@ -347,10 +356,13 @@
     <!-- !Country Served -->
     <!--!Testimonials Section  -->
     <section class="testimonials-section">
-      <h2 class="testimonial-title">
-        <i class="fa-solid fa-plane-departure"></i> Testimonials
-      </h2>
-      <h3 class="testimonial-subtitle">Hear it directly from our clients</h3>
+      <div class="how-we-help"><i class="ri-plane-line"></i> Testimonials</div>
+      <h2 class="section-title">Hear it directly from our clients</h2>
+      <p class="section-description">
+        Our clients recount their experiences with our dedicated team,
+        reflecting our commitment to excellence and personalized immigration
+        support.
+      </p>
 
       <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -636,7 +648,7 @@
           class="review-category-button"
           onclick="showReviews('corporate')"
         >
-          Tourists Visa
+          Tourist Visa
         </button>
       </div>
 
@@ -656,7 +668,152 @@
 
     <!--!Testimonials Section  -->
 
+    <!-- ! Contact Form  -->
+
+    <div class="contact-card">
+      <div class="hat-top">
+        <img
+          loading="lazy"
+          src="https://i.postimg.cc/CKDVdjkF/airp-1.png"
+          alt="Hat Illustration"
+        />
+      </div>
+      <h2 class="contact-heading">Let's Get in Touch</h2>
+      <form>
+        <div class="form-group">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your Name"
+            required
+          />
+          <span class="animated-label">Your Name</span>
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email Address"
+            required
+          />
+          <span class="animated-label">Email Address</span>
+        </div>
+        <div class="form-group">
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Phone Number"
+            required
+          />
+          <span class="animated-label">Phone Number</span>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="request-button">Contact me</button>
+          <div class="social-icons">
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-linkedin-box-line"></i></a>
+            <a href="#"><i class="ri-facebook-box-line"></i></a>
+            <a href="#"><i class="ri-phone-line"></i></a>
+            <a href="#"><i class="ri-mail-line"></i></a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- ! Contact Form  -->
+    <!--! Footer  -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <a href="#" aria-label="Go to homepage">
+              <img
+                loading="lazy"
+                src="https://i.postimg.cc/15g6RxQ1/image.png"
+                alt="Simplex Global Immigration Logo"
+            /></a>
+            <!-- Logo as image link -->
+          </div>
+          <p>
+            We are a highly reliable and reputed overseas visa consultancy firm
+            in Delhi who processes immigration, work, or, tourist, study, and
+            several other visas for Indian nationals.
+          </p>
+          <!-- Optional short description -->
+        </div>
+
+        <div class="footer-section foot-nav">
+          <h3>Quick Links</h3>
+          <nav class="footer-nav">
+            <ul>
+              <li><a href="#">About Company</a></li>
+              <!-- Replace # with your About Company page link -->
+              <li><a href="#">Services Offered</a></li>
+              <!-- Replace # with your Services Offered page link -->
+              <li><a href="#">Contact Us</a></li>
+              <!-- Replace # with your Contact Us page link -->
+              <li><a href="#">Colleges Offered</a></li>
+              <!-- Replace # with your Colleges Offered page link -->
+              <li><a href="#">Privacy Policy</a></li>
+              <!-- Example of extra link -->
+              <li><a href="#">Terms of Service</a></li>
+              <!-- Example of extra link -->
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="contact-head">Contact Us</h3>
+          <div class="footer-contact">
+            <ul>
+              <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+919971223202">+91 9971223202</a>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:info@simpleximmigration.com"
+                  >info@simpleximmigration.com</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <h3 class="follow-head">Follow Us</h3>
+            <ul class="footer-social-icons">
+              <li>
+                <a href="#" class="footer-social-icon-link" target="_blank"
+                  ><i class="fab fa-instagram footer-social-icon"></i
+                ></a>
+              </li>
+              <!-- Replace # with your Instagram link -->
+              <li>
+                <a href="#" class="footer-social-icon-link" target="_blank"
+                  ><i class="fab fa-facebook-f footer-social-icon"></i
+                ></a>
+              </li>
+              <!-- Replace # with your Facebook link -->
+              <li>
+                <a href="#" class="footer-social-icon-link" target="_blank"
+                  ><i class="fab fa-linkedin-in footer-social-icon"></i
+                ></a>
+              </li>
+              <!-- Replace # with your LinkedIn link -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        © 2025 Simplex Global Immigration. All rights reserved.
+      </div>
+    </footer>
+    <!--! Footer  -->
+
     <!--?Scripts  -->
+    <script src="scripts/header-menu.js"></script>
     <!-- Flickity JS -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>

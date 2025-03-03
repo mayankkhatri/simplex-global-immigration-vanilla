@@ -3,282 +3,145 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Immigration Services Section</title>
-    <!-- Remix Icon CDN -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <!-- flag-icons CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"
-    />
+    <title>Footer Design</title>
     <style>
-      /* CSS Reset and General Styles */
-      body,
-      html {
-        margin: 0;
-        padding: 0;
-        font-family: "poppins", sans-serif;
-        color: #333;
+      footer {
+        background-color: #f9f9f9; /* Light grey background */
+        padding: 50px 20px;
+        font-family: sans-serif;
       }
 
-      .count-cover {
-        padding: 2rem 0;
-      }
-
-      .countries-section {
-        padding: 20px;
-        max-width: 1500px; /* Maximum width for desktop view */
-        margin: 0 auto; /* Center the section */
-      }
-
-      /* Section Title Styles */
-      .section-main-title {
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
         display: flex;
-        align-items: center;
-        font-size: 1.1rem;
-        color: #f94a4b;
-        font-family: "Sora" sans-serif;
-        font-weight: bold;
+        justify-content: space-between;
+        align-items: flex-start;
       }
 
-      .section-main-title i {
-        font-size: 2rem;
-        margin-right: 5px;
-        color: #f94a4b;
-        transform: rotate(45deg); /* Rotate the plane icon */
+      .footer-logo {
+        width: 200px;
+        margin-right: 20px;
       }
 
-      .section-second-title {
-        font-size: 2rem; /* Default size, responsive adjustment below */
-        color: #002768;
-        margin-bottom: 15px;
-        line-height: 1.2;
-        margin-top: 15px;
-        font-family: "Sora", sans-serif;
-        font-weight: bold;
+      .footer-logo a {
+        display: block;
       }
 
-      .section-title-desc {
+      .footer-logo img {
+        width: 100%;
+        height: auto;
+      }
+
+      .footer-description {
+        flex: 1;
         color: #333;
-        margin-bottom: 20px;
         line-height: 1.6;
-        font-size: 1.05rem;
+        margin-right: 30px;
       }
 
-      /* Continent Filter Styles */
-      .continent-filter {
+      .footer-sections {
         display: flex;
-        gap: 10px;
-        margin-bottom: 30px;
-        overflow-x: auto; /* Enable horizontal scroll on mobile */
-        -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none; /* IE and Edge */
-      }
-      /* Hide scrollbar for Chrome, Safari and Opera */
-      .continent-filter::-webkit-scrollbar {
-        display: none;
+        gap: 50px;
       }
 
-      .continent-button {
-        padding: 8px 15px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        background-color: white;
-        color: #f94a4b;
-        cursor: pointer;
-        font-size: 1.25rem;
-        white-space: nowrap; /* Prevent text wrapping */
+      .footer-section {
+        flex: 1;
       }
 
-      .continent-button.active {
-        background-color: #f94a4b;
-        color: white;
-        border-color: #f94a4b;
+      .footer-section h3 {
+        color: #191970; /* Dark blue for headings */
+        font-weight: bold;
+        margin-bottom: 15px;
       }
 
-      /* Country Grid Styles */
-      .country-grid {
-        display: grid;
-        grid-template-columns: repeat(
-          auto-fit,
-          minmax(150px, 1fr)
-        ); /* Responsive columns */
-        gap: 15px;
+      .footer-section ul {
+        list-style: none;
+        padding: 0;
       }
 
-      .country-card {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        border: 1px solid #eee;
-        box-shadow: 0 rgba(0, 0, 0, 0.05);
-        border-radius: 5px;
-        gap: 10px;
+      .footer-section li {
+        margin-bottom: 8px;
       }
 
-      .country-flag {
-        font-size: 1.8rem; /* Original flag size */
-      }
-      .country-flag i {
-        border-radius: 2.5px;
+      .footer-section li a {
+        text-decoration: none;
+        color: #333;
       }
 
-      .country-name {
-        font-size: 1.2rem; /* Original name size */
-        font-weight: 600;
-        color: #002768;
-      }
-
-      /* Responsive adjustments */
-      @media (min-width: 768px) {
-        .section-second-title {
-          font-size: 32px; /* Desktop title size */
-        }
-        .country-name {
-          font-size: 1.4rem; /* Original name size */
-          font-weight: 600;
-          color: #002768;
-        }
-        .section-title-desc {
-          color: #333;
-          margin-bottom: 25px;
-          font-size: 1.25rem;
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .footer-container {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
         }
 
-        .country-grid {
-          grid-template-columns: repeat(
-            auto-fit,
-            minmax(200px, 1fr)
-          ); /* More columns on larger screens */
+        .footer-logo {
+          margin-bottom: 20px;
+          width: 150px;
+          margin-right: 0;
         }
-      }
-      @media (min-width: 1024px) {
-        .country-grid {
-          grid-template-columns: repeat(
-            auto-fit,
-            minmax(250px, 1fr)
-          ); /* Even more columns on larger screens */
+
+        .footer-description {
+          text-align: left;
+          margin-right: 0;
+          margin-bottom: 30px;
+        }
+
+        .footer-sections {
+          flex-direction: column;
+          gap: 30px;
+          text-align: left;
         }
       }
     </style>
   </head>
   <body>
-    <div class="count-cover">
-      <section class="countries-section">
-        <div class="section-main-title">
-          <i class="ri-plane-fill"></i> COUNTRIES WE OFFER SUPPORT
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <a href="https://simpleximmigration.com/">
+            <img
+              src="https://simpleximmigration.com/assets/logos/logo-bottom.png"
+              alt="Simplex Global Immigration"
+            />
+          </a>
         </div>
-        <h2 class="section-second-title">
-          Immigration & visa services following countries
-        </h2>
-        <p class="section-title-desc">
-          Experience a transformative journey with our expert team. At
-          <strong>Simplex Global Immigration</strong>, our trusted consultants
-          provide personalized guidance for a seamless immigration process,
-          helping you achieve your goals with confidence.
-        </p>
-        <!-- Continent Filter -->
-        <div class="continent-filter" id="continentFilter">
-          <button class="continent-button active" data-continent="all">
-            All
-          </button>
-          <button class="continent-button" data-continent="europe">
-            Europe
-          </button>
-          <button class="continent-button" data-continent="oceania">
-            Oceania
-          </button>
-          <button class="continent-button" data-continent="asia">Asia</button>
-          <button class="continent-button" data-continent="north-america">
-            North America
-          </button>
-          <button class="continent-button" data-continent="middle-east">
-            Middle East
-          </button>
+        <div class="footer-description">
+          <p>
+            We are a highly reliable and reputed overseas visa consultancy firm
+            in Delhi who processes immigration, work, or, tourist, study, and
+            several other visas for Indian nationals.
+          </p>
         </div>
-        <!-- Country Grid -->
-        <div class="country-grid" id="countryGrid">
-          <!-- Countries will be loaded here by JavaScript -->
+        <div class="footer-sections">
+          <div class="footer-section">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="#">Job Search Services</a></li>
+              <li><a href="#">Opportunity Research</a></li>
+              <li><a href="#">Resume Writing</a></li>
+              <li><a href="#">LinkedIn Marketing</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
         </div>
-      </section>
-    </div>
-
-    <script>
-      // JavaScript to handle country data and filtering
-      document.addEventListener("DOMContentLoaded", function () {
-        // Country Data (Name, Continent, Flag Class from flag-icons)
-        const countriesData = [
-          { name: "Australia", continent: "oceania", flagClass: "fi fi-au" },
-          { name: "Canada", continent: "north-america", flagClass: "fi fi-ca" },
-          { name: "Germany", continent: "europe", flagClass: "fi fi-de" },
-          { name: "Sweden", continent: "europe", flagClass: "fi fi-se" },
-          { name: "Austria", continent: "europe", flagClass: "fi fi-at" },
-          { name: "Hong Kong", continent: "asia", flagClass: "fi fi-hk" },
-          {
-            name: "United States",
-            continent: "north-america",
-            flagClass: "fi fi-us",
-          },
-          {
-            name: "United Kingdom",
-            continent: "europe",
-            flagClass: "fi fi-gb",
-          },
-          { name: "Singapore", continent: "asia", flagClass: "fi fi-sg" },
-          {
-            name: "Dubai, UAE",
-            continent: "middle-east",
-            flagClass: "fi fi-ae",
-          }, // Dubai is in UAE
-        ];
-
-        const countryGrid = document.getElementById("countryGrid");
-        const continentFilter = document.getElementById("continentFilter");
-        const continentButtons =
-          continentFilter.querySelectorAll(".continent-button");
-
-        let currentContinentFilter = "all";
-
-        // Function to render countries based on filter
-        function renderCountries() {
-          countryGrid.innerHTML = ""; // Clear existing countries
-          const filteredCountries = countriesData.filter((country) => {
-            return (
-              currentContinentFilter === "all" ||
-              country.continent === currentContinentFilter
-            );
-          });
-
-          filteredCountries.forEach((country) => {
-            const countryCard = document.createElement("div");
-            countryCard.classList.add("country-card");
-            countryCard.innerHTML = `
-                        <span class="country-flag"><i class="${country.flagClass}"></i></span>
-                        <span class="country-name">${country.name}</span>
-                    `;
-            countryGrid.appendChild(countryCard);
-          });
-        }
-
-        // Initial render of all countries
-        renderCountries();
-
-        // Event listener for continent filter buttons
-        continentFilter.addEventListener("click", function (event) {
-          if (event.target.classList.contains("continent-button")) {
-            continentButtons.forEach((button) =>
-              button.classList.remove("active")
-            ); // Remove active class from all buttons
-            event.target.classList.add("active"); // Add active class to clicked button
-            currentContinentFilter = event.target.dataset.continent;
-            renderCountries(); // Re-render countries based on new filter
-          }
-        });
-      });
-    </script>
+      </div>
+    </footer>
   </body>
 </html>
