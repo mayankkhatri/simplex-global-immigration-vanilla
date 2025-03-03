@@ -580,7 +580,7 @@ a {
   justify-content: stretch; /* Stretch items to make cards same height */
   align-items: center;
   border-radius: 5px;
-  border: 1px solid #eee; /* Light border around cards */
+  border: 1.5px solid #eee; /* Light border around cards */
 }
 
 .info-card:nth-child(even) {
