@@ -1,141 +1,116 @@
 const reviewsData = {
   students: [
-    /* ... (same student review data as before) ... */
     {
-      text: "I was confused about the admission process for IP University, but this consultancy made everything easy for me. They guided me through every step, from filling out the application to choosing the right college. Thanks to them, I got into my preferred course without any hassle!",
-      reviewerName: "Shruti Dagar",
-      reviewerCollege: "JIMS, Rohini",
+      text: "Simplex Team helped us to get our Canada PR Visa within Eleven months. I can recommend Simplex Global to anyone as they have a highly talented and professional staff. Special thanks go to Shristi who was very responsive and helpful throughout the process.",
+      reviewerName: "Samad Khan",
+      reviewerCollege: "Canada",
       reviewerImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9SiIKf19f1BiRklisd2EowMAPAaadnFm-QQ&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDhmxj400S8HH903uyFYsYKHHOO1rHaYpgHQ&s",
     },
     {
-      text: "Excellent guidance and support! Really helped me understand the options available and make the best decision for my career. Highly recommend!",
-      reviewerName: "Ankit Sharma",
-      reviewerCollege: "MSIT, Delhi",
+      text: "Vineet was very accommodating and assisted me in my Germany Visa Application which I started in 2021 but for some reason, my appointment was paid but not scheduled. He explained the process on the visa application process and sat through it and guided me step by step.  I highly recommend Simplex Global to anyone.",
+      reviewerName: "Amit Kumar",
+      reviewerCollege: "Germany",
       reviewerImage:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoiUEz4RGq3KG8CKPA5purU2ZhsBMa7WMwCSKI9I6IzSMz5NwgoTPu4pI3ZlsBmQ1vDwg&usqp=CAU",
     },
     {
-      text: "The personalized counseling was incredibly helpful. They took the time to understand my needs and provided tailored advice. Got into the college of my dreams!",
-      reviewerName: "Priya Verma",
-      reviewerCollege: "BVCOE, Delhi",
+      text: "I was really impressed by the level of service I received from the Simplex Immigration Team. They were always available to answer my questions and provide me with the necessary information about my Canada pr visa. They made the process of applying for permanent residence so much easier for me and my family.",
+      reviewerName: "Vineeta Jain",
+      reviewerCollege: "Canada",
       reviewerImage:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCnLo8Xm69Ycs74Afa5lqxXRdfYu7b2RzaAQ&s",
     },
     {
-      text: "From start to finish, the process was smooth and efficient. The consultants are knowledgeable and supportive. Very happy with their services!",
-      reviewerName: "Rohan Kapoor",
-      reviewerCollege: "MAIT, Delhi",
+      text: "I applied for a work permit for Poland unskilled recruitment through Simplex Global Immigration and I got an offer from a Truck Driving agency there. The process was completed in 2 months and it was smooth Highly recommend it!",
+      reviewerName: "Hamid",
+      reviewerCollege: "Poland",
       reviewerImage:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4cw84uA9RhWljI4tELFLrFkUodzvlnhY2aw&s",
     },
     {
-      text: "I am extremely grateful for their help. Navigating college admissions felt overwhelming, but they made it manageable and successful.",
-      reviewerName: "Sneha Patel",
-      reviewerCollege: "NDIM, Delhi",
+      text: "I am so grateful for the support and assistance provided by the Simplex immigration team during my Canada PR visa application process. Their expertise and attention to detail helped me to successfully achieve my goal of becoming a permanent resident in Canada.",
+      reviewerName: "Neeraj Chauhan",
+      reviewerCollege: "Canada",
       reviewerImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYmPoeKu_cUrV01BMB48Jrqi_tP-FJiixCRu28ybUKv4cN9ScYnfOw-eEX_q1mvIywHso&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJnpl4_b4UvEQ3IzLOEl25EZjOy2VjYzYaDw&s",
     },
     {
-      text: "Professional and reliable service. They provided clear information and kept me updated throughout the process. Top-notch counseling!",
-      reviewerName: "Vikram Singh",
-      reviewerCollege: "IBS, Delhi",
+      text: "From the first meeting with Vineet, we were treated like friends, everything was explained based on our background for our Germany Job Seeker visa application. Though our application was very unique, Vineet & his teams made the whole process stress-free, with their timely communication and vast knowledge/experience.",
+      reviewerName: "Akash Gupta",
+      reviewerCollege: "Germany",
       reviewerImage:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuysbmUir2gK0mILPCHu1ks0HwcLlGqSQdiTyeMpN6wkgYh0Mo0ZGiD45HwzO0qevy7co&usqp=CAU",
     },
     {
-      text: "Their expertise in IP University admissions is unmatched. They know the criteria and processes inside out. Made my application stand out!",
-      reviewerName: "Kavita Joshi",
-      reviewerCollege: "Vivekananda Institute of Professional Studies",
+      text: "The Simplex Immigration team was instrumental in helping me to navigate the complex Germany Job Seeker visa application process. Their personalized approach and constant support made the process much less stressful. I was able to get my visa approved quickly and I was able to find a job in Germany in a short time, thanks to their help.",
+      reviewerName: "Honey Ahuja",
+      reviewerCollege: "Germany",
       reviewerImage:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToQh2swSTTcYEbjbx1VhG5N_smOka3rlDIT_YfRPhKV3h4DbmdqSB1077ykiJXdiBs7p4&usqp=CAU",
     },
     {
-      text: "The 30-minute free consultation was very informative and convinced me to use their services. Best decision I made for my college admission journey!",
-      reviewerName: "Deepak Kumar",
-      reviewerCollege: "Fairfield Institute of Management and Technology",
+      text: "Gotten a Canada Pr visa with Simplex Teams help. I just needed to provide the necessary documents and Simplex Team will assist with the rest of the application. They have made the process easy for me and the fees are affordable as well. Thank you and special thanks to Daphnie who responds my queries regardless of the time.",
+      reviewerName: "Sunny Hinduja",
+      reviewerCollege: "Canada",
       reviewerImage:
         "https://img.freepik.com/free-photo/indian-man-student-shirt-posed-outdoor_627829-2276.jpg?semt=ais_hybrid",
     },
     {
-      text: "They helped me shortlist colleges that were perfect for my profile and aspirations. Their strategic approach made all the difference.",
-      reviewerName: "Neha Gupta",
-      reviewerCollege: "Unitedworld School of Business, Delhi",
+      text: "I have availed the services for job assistance from Simplex immigration. My domain was logistics and it becomes quite difficult when you start searching an employment from India. One of my colleagues recommended me Simplex and so far I am satisfied with the job search and marketing services provided by them.",
+      reviewerName: "Aniket Shishodia",
+      reviewerCollege: "Austria",
       reviewerImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQE7HTevRsAhwzoPpnIjH2YO2WDiPHa33KtPUTi_9HLqETYr7jkh5PkDZp4iv_5_r2Svw&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0cC1QJDY3tT2h32SfOY8OZtm8RqBDCK70nnbf7z014g0kugypE3gTctNqTrA1a-5VLF0&usqp=CAU",
     },
     {
-      text: "The transparent comparison report was incredibly useful. It helped me weigh the pros and cons and make an informed choice. Thank you!",
-      reviewerName: "Siddharth Menon",
-      reviewerCollege: "Jagannath International Management School",
+      text: "I am extremely satisfied with the efficient and professional service provided by Simplex Global Immigration. Their jobseeker visa assistance for warehouse supervisor in Sweden was exceptional. I received on-time responses to all my queries and the entire process was smooth. Highly recommend their services.",
+      reviewerName: "S.N Reddy",
+      reviewerCollege: "Sweden",
       reviewerImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUzo-w0xAVpEi1PohHT_GiyArt6eotsE0bbgRGKnch_Q_Hob1Gxd3_EuHkGOgPKGpEKY4&usqp=CAU",
+        "https://media.licdn.com/dms/image/v2/C4D03AQGISXQDTuX50Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1656590221241?e=2147483647&v=beta&t=W0cVwY9G2Ie8z4JZ_JcXAAa0af-8cFZty6r_wE2_5No",
+    },
+    {
+      text: "I am so grateful to Simplex Immigration for their trustworthy job assistance. As a supply chain professional, their support in securing my job seeker visa for Sweden in the logistics sector was invaluable.",
+      reviewerName: "Prakash Mahapatra",
+      reviewerCollege: "Sweden",
+      reviewerImage:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBplX2S9TpRWqrc2WjzMKck3TVShAXjeatdQ&s",
+    },
+    {
+      text: "I had a fantastic experience with Simplex Global Immigration Services LLP. Their team is reliable, professional, and truly great at what they do. Thanks to their expert assistance, I was able to secure my work visa hassle-free. I highly recommend their services to anyone in need of visa assistance.",
+      reviewerName: "Sharda Gupta",
+      reviewerCollege: "Austria",
+      reviewerImage:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNsZyyMFSWy9C0x41h8DelaFhtVVPfO3UNw&s",
+    },
+    {
+      text: "I am extremely satisfied with Simplex Global Immigration Services LLP. Their team is highly professional and reliable, ensuring a seamless visa application process. I highly recommend their services for anyone looking for a great team to assist with study, work, or tourist visas.",
+      reviewerName: "Arjun Gautam",
+      reviewerCollege: "Sweden",
+      reviewerImage:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXdg0naV98ddflCB1m_Nvp7QqcCfNDbHLFgA&s",
+    },
+    {
+      text: "Simplex Global Immigration Services LLP provided me with reliable and professional assistance throughout the entire visa application process. Their great team guided me in obtaining my study visa smoothly.The approach is very professional.",
+      reviewerName: "Mohit Bisht",
+      reviewerCollege: "Austria",
+      reviewerImage:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAwLN34ffIY3Q7Sj-u_tIQL9tL5whkkR3OlA&s",
     },
   ],
   parents: [
-    /* ... (same parent review data as before) ... */
     {
-      text: "As parents, we were very anxious about our child's college admission. Admission Hunt provided us with reassurance and expert guidance. Our son got into a great college, and we couldn't be happier.",
-      reviewerName: "Mr. & Mrs. Sharma",
-      reviewerImage: "https://placehold.co/400x400?text=S",
-    },
-    {
-      text: "Impressed with their professionalism and personal touch. They kept us informed at every stage and made the complex process seem simple.",
-      reviewerName: "Mrs. Kapoor",
-      reviewerImage: "https://placehold.co/400x400?text=K",
-    },
-    {
-      text: "Their support was invaluable. They understood our concerns and provided solutions that worked for our family. Highly recommended for any parent.",
-      reviewerName: "Mr. Patel",
-      reviewerImage: "https://placehold.co/400x400?text=P",
-    },
-    {
-      text: "We appreciate the time and effort they put into understanding our child's needs and finding the right fit. Excellent service!",
-      reviewerName: "Mrs. Singh",
-      reviewerImage: "https://placehold.co/400x400?text=S",
-    },
-    {
-      text: "The team was very responsive and helpful. They answered all our questions and addressed all our concerns promptly.",
-      reviewerName: "Mr. & Mrs. Joshi",
-      reviewerImage: "https://placehold.co/400x400?text=J",
-    },
-    {
-      text: "From consultation to admission, everything was handled with utmost care and efficiency. Thank you for making this journey stress-free for us.",
-      reviewerName: "Mrs. Kumar",
-      reviewerImage: "https://placehold.co/400x400?text=K",
+      text: "Please Refresh this page",
+      reviewerName: "Refresh",
+      reviewerImage: "https://placehold.co/400x400?text=R",
     },
   ],
   corporate: [
-    /* ... (same corporate review data as before) ... */
     {
-      text: "We have been partnering with Admission Hunt for our employee education programs. Their counseling services have been exceptional, helping our employees pursue higher education seamlessly.",
-      reviewerName: "Tech Solutions Inc.",
-      reviewerImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHzU569dapDm3f74DiG2mBYlYwPQvwvdROLg&s",
-    },
-    {
-      text: "Their understanding of the education sector and commitment to student success aligns with our corporate values. A valuable partner for employee development.",
-      reviewerName: "Global Corp",
-      reviewerImage:
-        "https://img.freepik.com/free-vector/global-corporation-logo_1043-184.jpg",
-    },
-    {
-      text: "Admission Hunt has been instrumental in facilitating further education for our workforce. Their services are professional, efficient, and highly effective.",
-      reviewerName: "Innovate Systems",
-      reviewerImage:
-        "https://img.freepik.com/free-vector/innovation-education-logo-template-vector-with-atom-science-graphic_53876-125986.jpg",
-    },
-    {
-      text: "We highly value our partnership with Admission Hunt. They have consistently provided excellent support and guidance to our employees seeking academic advancement.",
-      reviewerName: "Future Forward Ltd.",
-      reviewerImage:
-        "https://static.vecteezy.com/system/resources/thumbnails/005/883/807/small/letter-e-software-digital-tech-logo-free-vector.jpg",
-    },
-    {
-      text: "Their expertise in educational counseling has greatly benefited our corporate training initiatives. A reliable and trustworthy partner.",
-      reviewerName: "Pioneer Group",
-      reviewerImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd7unJm0gyoX5BGdKI6i0_KaghBFysJ1zpqg&s",
+      text: "Please Refresh this page",
+      reviewerName: "Refresh",
+      reviewerImage: "https://placehold.co/400x400?text=R",
     },
   ],
 };

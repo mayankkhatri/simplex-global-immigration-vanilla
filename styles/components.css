@@ -17,6 +17,10 @@ header {
   z-index: 2;
 }
 
+a {
+  text-decoration: none;
+}
+
 .logo img {
   width: calc(11vh + 6vw + 35px);
 }
@@ -41,7 +45,7 @@ nav a:nth-child(3) {
   padding: 10px;
   position: absolute;
   top: 50%;
-  right: 8px; /* Adjust position as needed */
+  right: 10px; /* Adjust position as needed */
   transform: translateY(-50%);
 }
 
@@ -112,6 +116,196 @@ nav a:nth-child(3) {
   }
 }
 /*! Header  */
+
+/* !Contact Section */
+
+.contact-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05), 0 6px 20px rgba(0, 0, 0, 0.05);
+  margin: 1rem;
+}
+
+.cont-wrap {
+  padding: 3rem 0;
+}
+
+.contact-heading {
+  text-align: center;
+  color: #f94a4b;
+  margin-bottom: 30px; /* Increased margin for better spacing */
+}
+
+.form-group {
+  position: relative; /* For label animation positioning */
+  margin-bottom: 25px; /* Increased margin for better spacing */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #f94a4b;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #333;
+  font-size: 16px; /* Adjusted font size for input text */
+  outline: none; /* Remove default focus outline */
+}
+
+/* Style for Placeholder Text */
+.form-group input::placeholder {
+  color: #f94a4b;
+  opacity: 1; /* Ensure placeholder is visible */
+  font-size: 16px; /* Match input text size initially */
+}
+
+/* Animated Label Style */
+.form-group .animated-label {
+  position: absolute;
+  left: 10px; /* Match input padding */
+  top: 50%;
+  transform: translateY(-8%);
+  color: #f94a4b;
+  font-size: 16px;
+  pointer-events: none; /* Make label not interfere with clicks */
+  transition: all 0.3s ease;
+  opacity: 0; /* Initially hidden */
+}
+
+/* Placeholder style when input is focused or has value */
+.form-group input:focus::placeholder,
+.form-group input:not(:placeholder-shown)::placeholder {
+  opacity: 0; /* Hide placeholder on focus or value present */
+}
+
+/* Animated Label Show on Focus or Value */
+.form-group input:focus + .animated-label,
+.form-group input:not(:placeholder-shown) + .animated-label {
+  opacity: 1; /* Show label */
+  top: -10px; /* Move label upwards */
+  font-size: 12px; /* Smaller label font size */
+  background-color: white; /* Background to cover input border */
+  padding: 0 5px; /* Add padding to background */
+  z-index: 1; /* Ensure label is above input border */
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.request-button {
+  background-color: #f94a4b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons i {
+  color: #f94a4b;
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contact-card {
+  position: relative;
+}
+
+.hat-top img {
+  position: absolute;
+  top: -65px;
+  right: 20px;
+  height: 250px;
+  z-index: 1;
+  transform-style: preserve-3d; /* enables 3D transforms on children if any */
+  animation: planeFly 6s infinite ease-in-out;
+}
+
+@keyframes planeFly {
+  0% {
+    transform: translateY(0) rotateX(0) rotateY(0) rotateZ(0);
+  }
+  25% {
+    transform: translateY(-5px) rotateX(2deg) rotateY(2deg) rotateZ(3deg);
+  }
+  50% {
+    transform: translateY(0) rotateX(0) rotateY(0) rotateZ(0);
+  }
+  75% {
+    transform: translateY(5px) rotateX(-2deg) rotateY(-2deg) rotateZ(-3deg);
+  }
+  100% {
+    transform: translateY(0) rotateX(0) rotateY(0) rotateZ(0);
+  }
+}
+
+/* --- For Mobile--- */
+
+@media (max-width: 767px) {
+  .hat-top img {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    height: 120px;
+    z-index: 2;
+  }
+  .social-icons {
+    display: flex;
+    gap: 5px;
+  }
+  .request-button {
+    font-size: 16px;
+    padding: 9px;
+  }
+  .social-icons i {
+    color: #f94a4b;
+    font-size: 25px;
+  }
+}
+
+/* --- For Desktop--- */
+
+@media (min-width: 724px) {
+  .contact-card {
+    padding: 50px;
+  }
+  .contact-heading {
+    font-size: 2.5rem;
+    font-family: "Afacad", sans-serif;
+  }
+  .form-group input {
+    width: 100%;
+    padding: 16px;
+    font-size: 20px;
+  }
+  .form-group input::placeholder {
+    font-size: 20px; /* Match input text size initially */
+  }
+  .request-button {
+    font-size: 20px;
+    padding: 12px 25px;
+  }
+
+  .social-icons i {
+    color: #f94a4b;
+    font-size: 40px;
+  }
+}
+
+/* !Contact Section */
 
 /*! Footer */
 

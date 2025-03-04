@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900"); /* Basic Reset and Font */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Container for consistent padding */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Red Banner Section */
+.red-banner {
+  background-color: #f94a4b;
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.breadcrumbs {
+  font-size: 1rem;
+}
+
+.breadcrumbs a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.breadcrumbs span {
+  margin: 0 0.5rem;
+}
+
+/* Visa Buttons Section */
+.visa-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+}
+
+.visa-button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #333;
+  transition: background-color 0.3s ease;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.visa-button:hover,
+.visa-button.active {
+  background-color: #f94a4b;
+  color: white;
+}
+
+/* Content Section */
+.country-content-section {
+  padding: 2rem 0;
+}
+
+.visa-content {
+  display: none; /* Initially hide all visa contents */
+}
+
+.visa-content.active {
+  display: block; /* Show active visa content */
+}
+
+.visa-content h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #f94a4b;
+}
+.visa-content h4 {
+  color: #002768;
+  font-size: 1.5rem;
+}
+.visa-content h5 {
+  color: #002768;
+  font-size: 1.15rem;
+}
+
+.visa-content p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.visa-content img {
+  width: 100%;
+  height: calc(15vh + 20vw); /* Responsive image height */
+  object-fit: cover;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px; /* Optional: Rounded corners for images */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for images */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .visa-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+  .visa-button {
+    font-size: 0.85rem;
+  }
+}

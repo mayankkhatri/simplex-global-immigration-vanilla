@@ -87,12 +87,11 @@
             class="illustrative-bg"
           />
           <div class="passport-container">
-            <video
-              autoplay
-              muted
-              loop
-              src="assets/content/home vid.mp4"
-            ></video>
+            <img
+              src="/assets/images/passport-home.png"
+              alt="Passport"
+              loading="eager"
+            />
           </div>
         </div>
         <div class="text-section">
@@ -322,7 +321,7 @@
           <i class="ri-plane-fill"></i> COUNTRIES WE OFFER SUPPORT
         </div>
         <h2 class="section-second-title">
-          Immigration & visa services following countries
+          Top Countries we offer Immigration Support for
         </h2>
         <p class="section-title-desc">
           Experience a transformative journey with our expert team. At
@@ -637,21 +636,27 @@
         <h2 class="reviews-section-heading sora-font primary-red-color">
           Our Reviews
         </h2>
-        <button
-          class="review-category-button active"
-          onclick="showReviews('students')"
-        >
-          Work Visa
-        </button>
-        <button class="review-category-button" onclick="showReviews('parents')">
-          Study Visa
-        </button>
-        <button
-          class="review-category-button"
-          onclick="showReviews('corporate')"
-        >
-          Tourist Visa
-        </button>
+        <!-- Remove display none in future -->
+        <div class="sorters" style="display: none">
+          <button
+            class="review-category-button active"
+            onclick="showReviews('students')"
+          >
+            Work Visa
+          </button>
+          <button
+            class="review-category-button"
+            onclick="showReviews('parents')"
+          >
+            Study Visa
+          </button>
+          <button
+            class="review-category-button"
+            onclick="showReviews('corporate')"
+          >
+            Tourist Visa
+          </button>
+        </div>
       </div>
 
       <div class="reviews-carousel-container" id="reviewsCarouselContainer">
@@ -752,17 +757,17 @@
           <h3>Quick Links</h3>
           <nav class="footer-nav">
             <ul>
-              <li><a href="#">About Company</a></li>
+              <li><a href="/about.html">About Company</a></li>
               <!-- Replace # with your About Company page link -->
-              <li><a href="#">Services Offered</a></li>
+              <li><a href="/index.html">Services Offered</a></li>
               <!-- Replace # with your Services Offered page link -->
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="/contact.html">Contact Us</a></li>
               <!-- Replace # with your Contact Us page link -->
-              <li><a href="#">Colleges Offered</a></li>
+              <li><a href="/immigrate.html">Countries Offered</a></li>
               <!-- Replace # with your Colleges Offered page link -->
-              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="/policy.html">Privacy Policy</a></li>
               <!-- Example of extra link -->
-              <li><a href="#">Terms of Service</a></li>
+              <li><a href="/terms.html">Terms of Service</a></li>
               <!-- Example of extra link -->
             </ul>
           </nav>
@@ -788,19 +793,28 @@
             <h3 class="follow-head">Follow Us</h3>
             <ul class="footer-social-icons">
               <li>
-                <a href="#" class="footer-social-icon-link" target="_blank"
+                <a
+                  href="https://www.instagram.com/simpleximmigration?igsh=OXBtMXJ6eHgwem1p"
+                  class="footer-social-icon-link"
+                  target="_blank"
                   ><i class="fab fa-instagram footer-social-icon"></i
                 ></a>
               </li>
               <!-- Replace # with your Instagram link -->
               <li>
-                <a href="#" class="footer-social-icon-link" target="_blank"
+                <a
+                  href="https://www.facebook.com/share/6sgizqhpuscNBbis/?mibextid=qi2Omg"
+                  class="footer-social-icon-link"
+                  target="_blank"
                   ><i class="fab fa-facebook-f footer-social-icon"></i
                 ></a>
               </li>
               <!-- Replace # with your Facebook link -->
               <li>
-                <a href="#" class="footer-social-icon-link" target="_blank"
+                <a
+                  href="https://www.linkedin.com/in/simplex-global-immigration-87477b217?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  class="footer-social-icon-link"
+                  target="_blank"
                   ><i class="fab fa-linkedin-in footer-social-icon"></i
                 ></a>
               </li>

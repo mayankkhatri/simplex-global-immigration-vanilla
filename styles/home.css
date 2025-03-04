@@ -93,6 +93,12 @@ body {
   position: relative;
   z-index: 1;
 }
+.passport-container img {
+  width: 100%;
+  max-width: 60vw; /* Reduced max-width for mobile passport container */
+  height: auto;
+  border-radius: 50%;
+}
 
 .passport-container video {
   width: 100%;
@@ -322,9 +328,9 @@ a {
 }
 .section-description {
   color: #333;
-  font-size: 1rem;
+  font-size: 1.15rem;
   line-height: 1.6;
-  max-width: 500px; /* Adjust as needed */
+  max-width: 900px; /* Adjust as needed */
 }
 
 /* Visa Cards Carousel Styles */
