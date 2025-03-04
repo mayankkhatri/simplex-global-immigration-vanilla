@@ -59,7 +59,7 @@ const reviewsData = {
     {
       text: "I have availed the services for job assistance from Simplex immigration. My domain was logistics and it becomes quite difficult when you start searching an employment from India. One of my colleagues recommended me Simplex and so far I am satisfied with the job search and marketing services provided by them.",
       reviewerName: "Aniket Shishodia",
-      reviewerCollege: "Austria",
+      reviewerCollege: "Portugal",
       reviewerImage:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0cC1QJDY3tT2h32SfOY8OZtm8RqBDCK70nnbf7z014g0kugypE3gTctNqTrA1a-5VLF0&usqp=CAU",
     },
@@ -94,7 +94,7 @@ const reviewsData = {
     {
       text: "Simplex Global Immigration Services LLP provided me with reliable and professional assistance throughout the entire visa application process. Their great team guided me in obtaining my study visa smoothly.The approach is very professional.",
       reviewerName: "Mohit Bisht",
-      reviewerCollege: "Austria",
+      reviewerCollege: "Germany",
       reviewerImage:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAwLN34ffIY3Q7Sj-u_tIQL9tL5whkkR3OlA&s",
     },
@@ -141,7 +141,7 @@ function showReviews(category) {
                   <p class="review-text">${review.text}</p>
                   <div class="reviewer-info">
                       <div class="reviewer-image-placeholder">
-                          <img src="${
+                          <img loading="lazy" src="${
                             review.reviewerImage || "placeholder-profile.svg"
                           }" alt="${review.reviewerName} Profile">
                       </div>

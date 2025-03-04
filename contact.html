@@ -6,7 +6,7 @@
     <!--! Font  -->
     <link
       rel="icon"
-      href="https://i.postimg.cc/25SzqN5f/Logo-Icon-1.png"
+      href="/assets/images/favicon.ico"
       type="image/png"
       sizes="16x16"
     />
@@ -24,243 +24,21 @@
     <!--! Font  -->
     <!--?Styles  -->
 
-    <!-- aos -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- aos -->
-    <link rel="stylesheet" href="styles/home.css" />
     <link rel="stylesheet" href="styles/components.css" />
-    <link rel="stylesheet" href="styles/animations.css" />
     <!--?Styles  -->
-    <title>Contact Us - Admission Hunt</title>
+    <title>Contact Us | Connect with Simplex Global Immigration</title>
     <meta
       name="description"
-      content="Reach out to Admission Hunt for expert education consultancy. Contact us via phone, email, or by filling out the form. We're here to help with your IP University admissions."
+      content="Get in touch with Simplex Global Immigration for expert immigration consultancy services. Reach out today for personalized visa guidance and start your journey toward migrating to your dream country."
     />
-    <style>
-      /* Ensure consistent box-sizing across browsers */
-      * {
-        box-sizing: border-box;
-      }
-
-      /* --- New Modern & Beautiful Styles for Contact Page --- */
-      body {
-        font-family: "Poppins", sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #fafafa;
-        color: #444;
-        line-height: 1.7;
-      }
-
-      main {
-        padding: 60px 30px;
-        margin-top: 3rem;
-      }
-
-      .contact-hero {
-        text-align: center;
-        margin-bottom: 60px;
-      }
-
-      .contact-hero-title {
-        font-size: 3em;
-        color: #002768;
-        margin-bottom: 20px;
-        font-weight: 700;
-        letter-spacing: -0.01em;
-      }
-
-      .contact-hero-subtitle {
-        font-size: 1.25em;
-        color: #777;
-        max-width: 850px;
-        margin: 0 auto;
-      }
-
-      .contact-container {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 1500px;
-        margin: 0 auto;
-        gap: 40px;
-      }
-
-      .contact-form-section {
-        flex: 2;
-        background-color: #ffffff;
-        padding: 45px;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      }
-
-      .contact-info-section {
-        flex: 1;
-        background-color: #f1f1f1;
-        padding: 45px;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-      }
-
-      .contact-section-heading {
-        font-size: 2em;
-        color: #002768;
-        margin-bottom: 30px;
-        font-weight: 600;
-      }
-
-      .form-group {
-        margin-bottom: 25px;
-      }
-
-      .form-label {
-        display: block;
-        font-size: 1em;
-        color: #555;
-        margin-bottom: 8px;
-        font-weight: 500;
-      }
-
-      .form-input,
-      .form-textarea {
-        width: 100%;
-        padding: 14px 20px;
-        font-size: 1em;
-        border: 1px solid #ddd;
-        border-radius: 6px;
-        background-color: #ffffff;
-        color: #444;
-        transition: border-color 0.3s ease-in-out;
-      }
-
-      .form-input:focus,
-      .form-textarea:focus {
-        border-color: #f94a4b;
-        outline: none;
-        box-shadow: 0 0 0 2px rgba(255, 111, 97, 0.2);
-      }
-
-      .form-textarea {
-        resize: vertical;
-        min-height: 150px;
-      }
-
-      .submit-button {
-        display: inline-block;
-        padding: 14px 35px;
-        font-size: 1.1em;
-        font-weight: 600;
-        color: #ffffff;
-        background-color: #f94a4b;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background-color 0.3s ease-in-out,
-          transform 0.2s ease-in-out;
-      }
-
-      .submit-button:hover {
-        background-color: #f94a4b;
-        transform: scale(1.02);
-      }
-
-      .contact-details-list {
-        list-style: none;
-        padding: 0;
-      }
-
-      .contact-details-list li {
-        display: flex;
-        align-items: center;
-      }
-
-      .contact-details-item {
-        margin-bottom: 20px;
-        display: flex;
-        align-items: flex-start;
-      }
-
-      .contact-icon {
-        font-size: 1.5em;
-        color: #f94a4b;
-        margin-right: 15px;
-        margin-top: 4px;
-      }
-
-      .contact-text {
-        font-size: 1.05em;
-        color: #666;
-      }
-
-      .contact-text a {
-        color: #666;
-        text-decoration: none;
-        transition: color 0.3s ease-in-out;
-      }
-
-      .contact-text a:hover {
-        color: #f94a4b;
-        text-decoration: underline;
-      }
-
-      .social-links {
-        margin-top: 35px;
-        text-align: left;
-      }
-
-      .social-links a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: #ffffff;
-        color: #f94a4b;
-        text-decoration: none;
-        font-size: 1.2em;
-        margin-right: 12px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-      }
-
-      .social-links a:hover {
-        background-color: #f94a4b;
-        color: #ffffff;
-      }
-
-      /* Responsive adjustments */
-      @media (max-width: 768px) {
-        main {
-          padding: 40px 20px;
-        }
-        .contact-hero-title {
-          font-size: 2.6em;
-        }
-        .contact-hero-subtitle {
-          font-size: 1.2em;
-        }
-        .contact-container {
-          flex-direction: column;
-        }
-        .contact-form-section,
-        .contact-info-section {
-          flex: 1;
-          width: 100%; /* Ensure full width on mobile */
-          padding: 35px;
-          margin-bottom: 20px;
-        }
-        .contact-section-heading {
-          font-size: 1.8em;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="/styles/contact.css" />
   </head>
   <body>
     <!--! Header -->
     <header>
       <div class="logo">
         <a href="/index.html" aria-label="Go to homepage">
-          <img src="assets/images/Header Logo.png" alt="Xtasy Media Logo" />
+          <img src="assets/images/Header Logo.png" alt="Simplex Logo" />
         </a>
       </div>
       <div class="hamburger-menu">

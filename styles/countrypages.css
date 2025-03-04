@@ -8,6 +8,10 @@ body {
   line-height: 1.6;
 }
 
+.hamburger-menu {
+  right: 25px !important; /* Adjust position as needed */
+}
+
 a {
   text-decoration: none;
 }
