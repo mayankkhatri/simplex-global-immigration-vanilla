@@ -368,6 +368,7 @@ a {
   margin: 0 10px; /* Margin between cards */
   width: 30%;
 }
+
 .visa-flickity-carousel .visa-card:hover {
   cursor: pointer;
 }
