@@ -115,7 +115,7 @@ body {
 
 .section-title-simplex {
   color: #f94a4b;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 10px;
   display: flex;
@@ -125,8 +125,20 @@ body {
 }
 
 .simpl-ico {
-  width: 2.2rem;
+  width: 2.4rem;
   margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .section-title-simplex {
+    font-size: 1.4rem;
+    text-wrap: nowrap;
+  }
+
+  .simpl-ico {
+    width: 2.1rem;
+    margin-right: 5px;
+  }
 }
 
 .main-heading {
@@ -558,10 +570,11 @@ a {
 .section-sub-heading {
   color: #002768; /* Blue color */
   font-family: "Afacad", sans-serif;
-  font-size: 32px;
+  font-size: calc(1.5rem + 2vw);
   font-weight: bold;
   line-height: 1.2; /* Adjust line height for better readability */
   margin-bottom: 20px;
+  max-width: 900px;
 }
 
 /* Section Description Styles */
@@ -804,8 +817,6 @@ a {
 }
 
 .country-card {
-  display: flex;
-  align-items: center;
   padding: 10px;
   border: 1px solid #eee;
   box-shadow: 0 rgba(0, 0, 0, 0.05);
@@ -813,8 +824,21 @@ a {
   gap: 10px;
 }
 
+.country-card:hover {
+  background-color: #f94a4b;
+}
+
+.country-card:hover span {
+  color: white;
+}
+.country-card a {
+  display: flex;
+  align-items: center;
+}
+
 .country-flag {
   font-size: 1.8rem; /* Original flag size */
+  margin-right: 10px;
 }
 .country-flag i {
   border-radius: 2.5px;
@@ -829,7 +853,7 @@ a {
 /* Responsive adjustments */
 @media (min-width: 768px) {
   .section-second-title {
-    font-size: 32px; /* Desktop title size */
+    font-size: 3rem; /* Desktop title size */
   }
   .country-name-sort {
     font-size: 1.4rem; /* Original name size */
