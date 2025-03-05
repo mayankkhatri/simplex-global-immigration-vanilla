@@ -261,17 +261,32 @@
 
     <!-- ! Contact Form  -->
 
-    <div class="cont-wrap">
+    <div
+      class="cont-wrap"
+      data-aos="fade"
+      data-aos-duration="700"
+      data-aos-delay="70"
+      data-aos-easing="ease-in-cubic"
+    >
       <div class="contact-card">
         <div class="hat-top">
           <img
             loading="lazy"
             src="https://i.postimg.cc/CKDVdjkF/airp-1.png"
             alt="Hat Illustration"
+            loading="lazy"
           />
         </div>
         <h2 class="contact-heading">Let's Get in Touch</h2>
-        <form>
+        <!--? Form Start  -->
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <!-- todo API KEy -->
+          <input
+            type="hidden"
+            name="access_key"
+            value="0c060d44-26dc-438d-a51f-26990927aff0"
+          />
+          <!-- todo API KEy -->
           <div class="form-group">
             <input
               type="text"
@@ -302,8 +317,18 @@
             />
             <span class="animated-label">Phone Number</span>
           </div>
+
+          <!-- ?Honeypot Spam Protection -->
+          <input
+            type="checkbox"
+            name="botcheck"
+            class="hidden"
+            style="display: none"
+          />
+          <!-- ?Honeypot Spam Protection -->
           <div class="form-actions">
             <button type="submit" class="request-button">Contact me</button>
+
             <div class="social-icons">
               <a
                 href="https://www.instagram.com/simpleximmigration?igsh=OXBtMXJ6eHgwem1p"
@@ -323,6 +348,8 @@
               ></a>
             </div>
           </div>
+
+          <!--? Form End  -->
         </form>
       </div>
     </div>

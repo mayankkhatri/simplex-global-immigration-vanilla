@@ -70,7 +70,15 @@
         <!-- Contact Form Section -->
         <section class="contact-form-section">
           <h2 class="contact-section-heading">Send Us a Message</h2>
-          <form>
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <!-- todo API KEy -->
+            <input
+              type="hidden"
+              name="access_key"
+              value="0c060d44-26dc-438d-a51f-26990927aff0"
+            />
+            <!-- todo API KEy -->
+
             <div class="form-group">
               <label for="name" class="form-label">Your Name</label>
               <input
@@ -105,6 +113,16 @@
                 required
               ></textarea>
             </div>
+
+            <!-- ?Honeypot Spam Protection -->
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="hidden"
+              style="display: none"
+            />
+            <!-- ?Honeypot Spam Protection -->
+
             <button type="submit" class="submit-button">Send Message</button>
           </form>
         </section>

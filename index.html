@@ -795,7 +795,15 @@
           />
         </div>
         <h2 class="contact-heading">Let's Get in Touch</h2>
-        <form>
+        <!--? Form Start  -->
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <!-- todo API KEy -->
+          <input
+            type="hidden"
+            name="access_key"
+            value="0c060d44-26dc-438d-a51f-26990927aff0"
+          />
+          <!-- todo API KEy -->
           <div class="form-group">
             <input
               type="text"
@@ -826,8 +834,18 @@
             />
             <span class="animated-label">Phone Number</span>
           </div>
+
+          <!-- ?Honeypot Spam Protection -->
+          <input
+            type="checkbox"
+            name="botcheck"
+            class="hidden"
+            style="display: none"
+          />
+          <!-- ?Honeypot Spam Protection -->
           <div class="form-actions">
             <button type="submit" class="request-button">Contact me</button>
+
             <div class="social-icons">
               <a
                 href="https://www.instagram.com/simpleximmigration?igsh=OXBtMXJ6eHgwem1p"
@@ -847,6 +865,8 @@
               ></a>
             </div>
           </div>
+
+          <!--? Form End  -->
         </form>
       </div>
     </div>
