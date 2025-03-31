@@ -47,7 +47,7 @@ body {
 
 .hero-section {
   background-color: #f5f8fc;
-  padding: calc(7vh + 8vw) 15px;
+  padding: calc(7vh + 8vw) calc(1vh + 3vw);
   margin-top: 2.5rem;
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
