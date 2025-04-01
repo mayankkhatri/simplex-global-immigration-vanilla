@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refund Policy - Simplex Global Immigration Services LLP</title>
+    <link rel="stylesheet" href="styles/components.css" />
+
+    <!--?Styles  -->
+    <link
+      rel="icon"
+      href="/assets/images/favicon.ico"
+      type="image/png"
+      sizes="16x16"
+    />
+    <title>
+      Simplex Global Immigration | Best Visa & Immigration Consultancy Firm for
+      Indian Citizens
+    </title>
+    <meta
+      name="description"
+      content="Discover unmatched visa solutions and expert immigration consultancy at Simplex Global Immigration. Since 2014, we empower individuals, families, investors, and jobseekers in India with knowledge, experience, and expertise."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* --- Global Styles & Variables --- */
+      :root {
+        --primary-color: #0a4d68; /* Deep Blue */
+        --secondary-color: #088395; /* Tealish Blue */
+        --accent-color: #f5f5f5; /* Light Gray Background */
+        --text-color: #333;
+        --heading-color: #0a4d68;
+        --border-color: #e0e0e0;
+        --white-color: #ffffff;
+        --font-primary: "Lato", sans-serif;
+        --font-secondary: "Montserrat", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--font-primary);
+        font-size: 16px;
+        line-height: 1.7;
+        color: var(--text-color);
+        background-color: var(--accent-color);
+        display: flex;
+        justify-content: center;
+        padding: 5rem 10px; /* Add padding for small screens */
+      }
+
+      /* --- Container --- */
+      .policy-container {
+        background-color: var(--white-color);
+        max-width: 900px;
+        width: 100%;
+        margin: 20px auto;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        overflow: hidden; /* Ensures footer stays within rounded corners */
+      }
+
+      /* --- Header --- */
+      .policy-header {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        padding: 30px 40px;
+        text-align: center;
+        border-bottom: 5px solid var(--secondary-color);
+      }
+
+      .policy-header h1 {
+        font-family: var(--font-secondary);
+        font-weight: 700;
+        font-size: 2.5em;
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+      }
+
+      .policy-header .company-name {
+        font-size: 1.1em;
+        font-weight: 300;
+        opacity: 0.9;
+      }
+
+      /* --- Main Content Area --- */
+      .policy-content {
+        padding: 30px 40px;
+      }
+
+      /* --- Section Styling --- */
+      section {
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      section:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      h2 {
+        font-family: var(--font-secondary);
+        font-size: 1.8em;
+        color: var(--heading-color);
+        margin-bottom: 20px;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      /* Underline effect for H2 */
+      h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: var(--secondary-color);
+      }
+
+      p {
+        margin-bottom: 15px;
+      }
+
+      .intro-paragraph {
+        font-size: 1.1em;
+        color: #555;
+        margin-bottom: 25px;
+      }
+
+      /* --- Important Notice Section --- */
+      .important-notice {
+        background-color: #eef7ff; /* Light blue background */
+        padding: 25px;
+        border-radius: 8px;
+        border-left: 5px solid var(--primary-color);
+      }
+
+      .important-notice h2 {
+        font-size: 1.5em; /* Slightly smaller H2 for this section */
+        margin-bottom: 15px;
+      }
+      .important-notice h2::after {
+        width: 50px; /* Adjust underline */
+      }
+
+      .important-notice p {
+        margin-bottom: 10px;
+        font-size: 0.95em;
+      }
+
+      .important-notice p:last-child {
+        margin-bottom: 0;
+      }
+
+      .important-notice strong {
+        color: var(--primary-color);
+        font-weight: 700;
+      }
+
+      /* --- Non-Refundable Conditions List --- */
+      .conditions-list {
+        list-style: none; /* Remove default numbering */
+        padding-left: 0;
+        counter-reset: conditions-counter; /* Initiate custom counter */
+      }
+
+      .conditions-list li {
+        position: relative;
+        padding-left: 45px; /* Space for custom number */
+        margin-bottom: 20px;
+        font-size: 1em;
+        line-height: 1.8;
+        counter-increment: conditions-counter; /* Increment counter for each li */
+      }
+
+      /* Custom Number Styling */
+      .conditions-list li::before {
+        content: counter(conditions-counter); /* Display the counter value */
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        background-color: var(--secondary-color);
+        color: var(--white-color);
+        font-weight: 700;
+        font-size: 0.9em;
+        border-radius: 50%; /* Make it circular */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 30px; /* Center number vertically */
+        font-family: var(--font-secondary);
+      }
+
+      /* --- Footer --- */
+      .policy-footer {
+        background-color: #f8f9fa; /* Slightly off-white */
+        color: #6c757d; /* Muted gray text */
+        text-align: center;
+        padding: 20px 40px;
+        font-size: 0.9em;
+        border-top: 1px solid var(--border-color);
+      }
+
+      /* --- Responsive Adjustments --- */
+      @media (max-width: 768px) {
+        .policy-header h1 {
+          font-size: 2em;
+        }
+        .policy-header,
+        .policy-content,
+        .policy-footer {
+          padding: 20px;
+        }
+        h2 {
+          font-size: 1.6em;
+        }
+        .conditions-list li {
+          padding-left: 40px;
+          font-size: 0.95em;
+        }
+        .conditions-list li::before {
+          width: 28px;
+          height: 28px;
+          font-size: 0.85em;
+          line-height: 28px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        body {
+          padding: 10px 5px; /* Reduce padding on very small screens */
+        }
+        .policy-container {
+          margin: 10px auto;
+          border-radius: 5px;
+        }
+        .policy-header h1 {
+          font-size: 1.7em;
+        }
+        .policy-header .company-name {
+          font-size: 1em;
+        }
+        h2 {
+          font-size: 1.4em;
+        }
+        .intro-paragraph {
+          font-size: 1em;
+        }
+        .important-notice {
+          padding: 15px;
+        }
+        .conditions-list li {
+          padding-left: 35px; /* Adjust padding for smaller number */
+          margin-bottom: 15px;
+        }
+        .conditions-list li::before {
+          width: 25px;
+          height: 25px;
+          font-size: 0.8em;
+          line-height: 25px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--! Header -->
+    <header>
+      <div class="logo">
+        <a href="/index.html" aria-label="Go to homepage">
+          <img
+            src="assets/images/Header Logo.png"
+            alt="Simplex Logo"
+            loading="eager"
+          />
+        </a>
+      </div>
+
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <nav class="nav">
+        <a href="about.html">About Us</a>
+        <a href="immigrate.html">Immigrate</a>
+        <a href="contact.html" id="contact-a">Contact</a>
+      </nav>
+    </header>
+    <!--! Header -->
+    <div class="policy-container">
+      <div class="policy-header">
+        <h1>Refund Policy</h1>
+        <p class="company-name">Simplex Global Immigration Services LLP</p>
+      </div>
+
+      <main class="policy-content">
+        <section class="important-notice">
+          <h2>Important Legal Notice</h2>
+          <p>
+            AN ADVISOR-CLIENT OR CONSULTANT-CLIENT ASSOCIATION IS– AND WILL
+            CONTINUE TO BE–SUBJECT TO A COMPLETELY NEW CONTRACT OF LEGAL
+            AGREEMENT DECIDED AND INKED BETWEEN BOTH THE PARTIES, NAMELY SIMPLEX
+            IMMIGRATION AND THE CLIENT.
+          </p>
+          <p>
+            <strong
+              >THIS REFUND POLICY IS TO BE READ SUBJECT TO YOUR RIGHTS AS PER
+              THE CONTRACT OF LEGAL AGREEMENT SIGNED BETWEEN SIMPLEX GLOBAL
+              IMMIGRATION AND THE CLIENT.</strong
+            >
+          </p>
+        </section>
+
+        <section class="non-refundable-conditions">
+          <h2>Conditions for Non-Refund</h2>
+          <p class="intro-paragraph">
+            In case the visa application faces rejection or encounters issues
+            under the following circumstances, please note that Simplex Global
+            Immigration Services LLP will not provide any refund or
+            compensation:
+          </p>
+
+          <ol class="conditions-list">
+            <li>
+              There is no refund in case of visa rejection or file goes on hold.
+            </li>
+            <li>
+              The client fails to cooperate by providing all required documents
+              for filing the case with the Visa Office within 7 days after
+              signing the Contract of Engagement for our services.
+            </li>
+            <li>
+              No refund shall be granted on withdrawal cases initiated by the
+              client after the initial 7-day period from the process
+              commencement date.
+            </li>
+            <li>
+              No refund if the file is placed on hold or gets rejected by
+              immigration authorities. Simplex Global Immigration is not liable
+              for delays caused by Government Authorities or Foreign Embassies.
+            </li>
+            <li>
+              The case is rejected, or the visa is revoked due to the client
+              providing false information, misrepresentation, engaging in fraud,
+              failing to adhere to the Agreement's terms and conditions, or
+              withholding relevant information during application processing or
+              the Visa Office interview.
+            </li>
+            <li>
+              The client fails to respond or coordinate adequately with their
+              assigned case manager via phone or email regarding their
+              application process, despite receiving multiple reminders. In such
+              instances, the case will be closed automatically without the
+              possibility of reopening, and no refund request will be
+              considered.
+            </li>
+            <li>
+              The client fails to attend the scheduled visa interview or does
+              not pass the visa interview.
+            </li>
+            <li>
+              The client or their family members fail to provide required
+              medical examination results or documentation.
+            </li>
+            <li>
+              No compensation is provided if the client fails to meet the
+              qualification or educational credential requirements set forth by
+              the relevant immigration authorities.
+            </li>
+            <li>
+              In the event of visa rejection or application refusal by the
+              embassy/consulate, the client's file will be closed by Simplex
+              Global Immigration without prior notification. Simplex will not be
+              liable for any refund or further services towards the client in
+              this scenario.
+            </li>
+            <li>
+              Simplex Global Immigration bears no responsibility if the client
+              submits fraudulent documents, as the entire immigration process
+              relies on legal and authentic submissions.
+            </li>
+            <li>
+              Simplex Global Immigration is not responsible for providing a
+              refund if the client withdraws their case due to personal reasons,
+              unforeseen circumstances, or any reason not attributable to
+              Simplex, as the process involves government procedures and legal
+              affairs.
+            </li>
+          </ol>
+        </section>
+      </main>
+
+      <footer class="policy-footer">
+        <p>
+          ©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Simplex Global Immigration Services LLP. All Rights Reserved.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
