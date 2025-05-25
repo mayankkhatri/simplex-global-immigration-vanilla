@@ -22,6 +22,13 @@ const reviewsData = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCnLo8Xm69Ycs74Afa5lqxXRdfYu7b2RzaAQ&s",
     },
     {
+      text: "After so many queries from different consultants I applied for my Portugal job seeker visa through Simplex. The process was very smooth and guidance by the case manager was to the point.I highly recommend the services of Simplex for anyone who is looking to immigrate.",
+      reviewerName: "Vishal Singh",
+      reviewerCollege: "Portugal",
+      reviewerImage:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBf3DVmNDU0lZATJHKdQEjPY7UQ3oh3yGqRg&s",
+    },
+    {
       text: "I applied for a work permit for Poland unskilled recruitment through Simplex Global Immigration and I got an offer from a Truck Driving agency there. The process was completed in 2 months and it was smooth Highly recommend it!",
       reviewerName: "Hamid",
       reviewerCollege: "Poland",
@@ -41,6 +48,13 @@ const reviewsData = {
       reviewerCollege: "Germany",
       reviewerImage:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuysbmUir2gK0mILPCHu1ks0HwcLlGqSQdiTyeMpN6wkgYh0Mo0ZGiD45HwzO0qevy7co&usqp=CAU",
+    },
+    {
+      text: " I applied for Portugal job search visa process with Simplex Immigration and they helped me in every step. The documentation was done properly without taking any extra follow up.Thanks for assisting me..",
+      reviewerName: "Amit Sehrawat",
+      reviewerCollege: "Portugal",
+      reviewerImage:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScFAKsx5OmL5R9cYWT8kBOOOeHy_iVN5QHOQ&s",
     },
     {
       text: "The Simplex Immigration team was instrumental in helping me to navigate the complex Germany Job Seeker visa application process. Their personalized approach and constant support made the process much less stressful. I was able to get my visa approved quickly and I was able to find a job in Germany in a short time, thanks to their help.",
