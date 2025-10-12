@@ -53,8 +53,7 @@
       .success-stories-reimagined {
         position: relative;
         width: 100%;
-        padding: 70px 0;
-        padding-bottom: 0;
+        padding: 100px 0;
         background: linear-gradient(145deg, #101c36 0%, #1a2c52 100%);
         color: #fff;
         overflow: hidden;
@@ -65,21 +64,20 @@
         margin-bottom: 40px;
       }
 
-      /* === NEW: Wrapper to align icon and title horizontally === */
+      /* Wrapper to align icon and title horizontally ON DESKTOP */
       .success-stories-reimagined .title-line {
         display: flex;
-        justify-content: center; /* Horizontally center the group */
-        align-items: center; /* Vertically align icon and text */
-        gap: 20px; /* Space between icon and title */
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
         margin-bottom: 12px;
       }
 
-      /* === MODIFIED: Aeroplane Icon Styling === */
       .success-stories-reimagined .title-icon {
         font-size: 56px;
-        color: #f94a4b;
+        color: #fff;
         display: inline-block;
-        margin-bottom: 0; /* Removed bottom margin */
+        margin-bottom: 0; /* Remove margin for flex alignment */
         animation: fly-in-animation 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards,
           float-plane 4s ease-in-out 1.7s infinite;
       }
@@ -110,13 +108,12 @@
         }
       }
 
-      /* === MODIFIED: Title Styling === */
       .success-stories-reimagined .success-title {
         font-size: clamp(2.8rem, 5vw, 4.5rem);
         font-weight: 800;
         line-height: 1.2;
         color: #f94a4b;
-        margin-bottom: 0; /* Removed bottom margin */
+        margin-bottom: 0; /* Remove margin for flex alignment */
         text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
       }
 
@@ -185,16 +182,29 @@
         transform: scale(1.1);
       }
 
+      /* === Mobile Responsive Styles === */
       @media (max-width: 767px) {
         .success-prev-reimagined,
         .success-next-reimagined {
           display: none;
         }
         .success-stories-reimagined {
-          padding: 80px 0;
+          padding: 40px 0;
+          padding-bottom: 0;
         }
         .success-swiper-reimagined .swiper-slide {
-          width: 120px;
+          width: 150px;
+          padding: 6px;
+        }
+
+        /* === NEW: Revert to stacked layout on mobile === */
+        .success-stories-reimagined .title-line {
+          flex-direction: column; /* This is the key change: stacks items vertically */
+          gap: 16px; /* Adjust space for vertical layout */
+        }
+        .success-stories-reimagined .success-title {
+          /* Reduce title size slightly on mobile to prevent wrapping */
+          font-size: clamp(2.4rem, 8vw, 3rem);
         }
       }
       /* === End Success Stories Reimagined Section === */
