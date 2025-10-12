@@ -49,119 +49,155 @@
 
     <!--! Custom Styles for New Section -->
     <style>
-      /* Success Stories Section */
-      .success-stories-section {
-        padding: 60px 0;
-        background-color: #f8f9fa; /* A slightly off-white to distinguish from pure white cards */
+      /* === Success Stories Reimagined Section === */
+      .success-stories-reimagined {
+        position: relative;
+        width: 100%;
+        padding: 70px 0;
+        padding-bottom: 0;
+        background: linear-gradient(145deg, #101c36 0%, #1a2c52 100%);
+        color: #fff;
+        overflow: hidden;
         text-align: center;
       }
 
-      .success-stories-section .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 15px;
+      .success-stories-reimagined .title-container {
+        margin-bottom: 40px;
       }
 
-      /* Make sure section titles match the rest of the site */
-      .success-stories-section .how-we-help {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        color: #f94a4b;
-        font-weight: 600;
-        font-size: 14px;
+      /* === NEW: Wrapper to align icon and title horizontally === */
+      .success-stories-reimagined .title-line {
+        display: flex;
+        justify-content: center; /* Horizontally center the group */
+        align-items: center; /* Vertically align icon and text */
+        gap: 20px; /* Space between icon and title */
         margin-bottom: 12px;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
       }
 
-      .success-stories-section .section-title {
-        color: #1a2c52; /* Matching the color from other sections */
-        font-size: 36px;
-        font-weight: 700;
-        margin-bottom: 16px;
+      /* === MODIFIED: Aeroplane Icon Styling === */
+      .success-stories-reimagined .title-icon {
+        font-size: 56px;
+        color: #f94a4b;
+        display: inline-block;
+        margin-bottom: 0; /* Removed bottom margin */
+        animation: fly-in-animation 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards,
+          float-plane 4s ease-in-out 1.7s infinite;
       }
 
-      .success-stories-section .section-description {
-        color: #555;
-        font-size: 16px;
-        line-height: 1.6;
-        max-width: 800px;
-        margin: 0 auto 40px auto;
+      @keyframes fly-in-animation {
+        0% {
+          transform: translateY(40px) translateX(-40px) rotate(-45deg)
+            scale(0.5);
+          opacity: 0;
+        }
+        70% {
+          transform: translateY(-10px) translateX(5px) rotate(10deg) scale(1.1);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+          opacity: 1;
+        }
       }
 
-      .success-swiper {
+      @keyframes float-plane {
+        0%,
+        100% {
+          transform: translateY(0) rotate(-2deg);
+        }
+        50% {
+          transform: translateY(-10px) rotate(3deg);
+        }
+      }
+
+      /* === MODIFIED: Title Styling === */
+      .success-stories-reimagined .success-title {
+        font-size: clamp(2.8rem, 5vw, 4.5rem);
+        font-weight: 800;
+        line-height: 1.2;
+        color: #f94a4b;
+        margin-bottom: 0; /* Removed bottom margin */
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .success-stories-reimagined .success-subtitle {
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        font-weight: 300;
+        color: #e0e0e0;
+        max-width: 600px;
+        margin: 0 auto;
+        opacity: 0.9;
+      }
+
+      .success-swiper-reimagined {
         width: 100%;
-        padding-top: 20px;
-        padding-bottom: 50px; /* Space for pagination */
+        padding-top: 50px;
+        padding-bottom: 50px;
       }
 
-      .success-card {
-        background-color: #fff;
-        border-radius: 12px;
-        border: 1px solid #e9ecef;
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        height: 100%;
+      .success-swiper-reimagined .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 140px;
+        height: auto;
         display: flex;
         align-items: center;
         justify-content: center;
+        border-radius: 12px;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        transform-style: preserve-3d;
+        -webkit-box-reflect: below 1px
+          linear-gradient(transparent, transparent, #0004);
       }
 
-      .success-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-      }
-
-      .success-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      .success-swiper-reimagined .swiper-slide img {
         display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease;
       }
 
-      /* Swiper Navigation & Pagination */
-      .success-swiper .swiper-pagination-bullet {
-        background-color: #1a2c52;
-        opacity: 0.5;
+      .success-swiper-reimagined .swiper-slide:hover img {
+        transform: scale(1.05);
       }
 
-      .success-swiper .swiper-pagination-bullet-active {
-        background-color: #f94a4b;
-        opacity: 1;
-      }
-
-      .success-swiper .success-prev,
-      .success-swiper .success-next {
-        color: #f94a4b; /* Main brand red color */
-        --swiper-navigation-size: 28px;
-        background-color: rgba(255, 255, 255, 0.9);
-        width: 44px;
-        height: 44px;
+      .success-prev-reimagined,
+      .success-next-reimagined {
+        --swiper-navigation-size: 24px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s ease;
-      }
-      .success-swiper .success-prev:hover,
-      .success-swiper .success-next:hover {
-        background-color: #fff;
-      }
-
-      .success-swiper .success-prev:after,
-      .success-swiper .success-next:after {
-        font-weight: bold;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #fff;
+        transition: all 0.3s ease;
+        top: 50%;
       }
 
-      @media (max-width: 768px) {
-        .success-stories-section .section-title {
-          font-size: 28px;
-        }
-        .success-swiper .success-prev,
-        .success-swiper .success-next {
+      .success-prev-reimagined:hover,
+      .success-next-reimagined:hover {
+        background: #f94a4b;
+        border-color: #f94a4b;
+        transform: scale(1.1);
+      }
+
+      @media (max-width: 767px) {
+        .success-prev-reimagined,
+        .success-next-reimagined {
           display: none;
         }
+        .success-stories-reimagined {
+          padding: 80px 0;
+        }
+        .success-swiper-reimagined .swiper-slide {
+          width: 120px;
+        }
       }
+      /* === End Success Stories Reimagined Section === */
     </style>
     <!--! Custom Styles for New Section -->
 
@@ -556,148 +592,126 @@
     </div>
     <!-- !Country Served -->
 
-    <!--! Success Stories Section -->
-    <section
-      class="success-stories-section"
-      data-aos="fade-up"
-      data-aos-duration="700"
-      data-aos-delay="70"
-      data-aos-easing="ease-in-cubic"
-    >
-      <div class="container">
-        <div class="how-we-help">
-          <i class="ri-thumb-up-line"></i> SUCCESS STORIES
-        </div>
-        <h2 class="section-title">Visas We've Secured for Our Clients</h2>
-        <p class="section-description">
-          Browse through a gallery of visas we have successfully secured for our
-          valued clients, turning their immigration dreams into reality.
-        </p>
-
-        <!-- Swiper -->
-        <div class="swiper success-swiper">
-          <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide">
-              <div class="success-card">
-                <img
-                  src="https://i.postimg.cc/dVpGZs6K/1.jpg"
-                  alt="Client Visa Success Story 1"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <!-- Slide 2 -->
-            <div class="swiper-slide">
-              <div class="success-card">
-                <img
-                  src="https://i.postimg.cc/ht6VQDsW/10.jpg"
-                  alt="Client Visa Success Story 2"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <!-- Slide 3 -->
-            <div class="swiper-slide">
-              <div class="success-card">
-                <img
-                  src="https://i.postimg.cc/2SMnLkGN/11.jpg"
-                  alt="Client Visa Success Story 3"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <!-- Slide 4 -->
-            <div class="swiper-slide">
-              <div class="success-card">
-                <img
-                  src="https://i.postimg.cc/JzvjHrxM/2.jpg"
-                  alt="Client Visa Success Story 4"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <!-- Slide 5 -->
-            <div class="swiper-slide">
-              <div class="success-card">
-                <img
-                  src="https://i.postimg.cc/XYm9BjLV/3.jpg"
-                  alt="Client Visa Success Story 5"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <!-- Slide 6 -->
-            <div class="swiper-slide">
-              <div class="success-card">
-                <img
-                  src="https://i.postimg.cc/2SV45bQN/4.jpg"
-                  alt="Client Visa Success Story 6"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <!-- Slide 7 -->
-            <div class="swiper-slide">
-              <div class="success-card">
-                <img
-                  src="https://i.postimg.cc/CxzjKBGT/5.jpg"
-                  alt="Client Visa Success Story 7"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <!-- Slide 8 -->
-            <div class="swiper-slide">
-              <div class="success-card">
-                <img
-                  src="https://i.postimg.cc/kgBx56Q9/6.jpg"
-                  alt="Client Visa Success Story 8"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <!-- Slide 9 -->
-            <div class="swiper-slide">
-              <div class="success-card">
-                <img
-                  src="https://i.postimg.cc/YCh1SG67/7.jpg"
-                  alt="Client Visa Success Story 9"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <!-- Slide 10 -->
-            <div class="swiper-slide">
-              <div class="success-card">
-                <img
-                  src="https://i.postimg.cc/3xV208B6/8.jpg"
-                  alt="Client Visa Success Story 10"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <!-- Slide 11 -->
-            <div class="swiper-slide">
-              <div class="success-card">
-                <img
-                  src="https://i.postimg.cc/Z526vbc2/9.jpg"
-                  alt="Client Visa Success Story 11"
-                  loading="lazy"
-                />
-              </div>
-            </div>
+    <!--! Success Stories Section - Reimagined -->
+    <!--! Success Stories Section - Reimagined -->
+    <section class="success-stories-reimagined">
+      <div class="container" data-aos="fade-up">
+        <!-- === MODIFIED HTML STRUCTURE === -->
+        <div class="title-container">
+          <!-- This new div will align the icon and title horizontally -->
+          <div class="title-line">
+            <i class="ri-send-plane-fill title-icon"></i>
+            <h2 class="success-title">Success Stories</h2>
           </div>
-          <!-- Add Pagination -->
-          <div class="swiper-pagination"></div>
-
-          <!-- Add Navigation -->
-          <div class="swiper-button-prev success-prev"></div>
-          <div class="swiper-button-next success-next"></div>
+          <p class="success-subtitle">
+            Realizing Global Ambitions, One Visa at a Time.
+          </p>
         </div>
+        <!-- === END MODIFICATION === -->
+      </div>
+
+      <div
+        class="swiper success-swiper-reimagined"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+      >
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <img
+              src="https://i.postimg.cc/hvF7YNTZ/1.jpg"
+              alt="Client Visa Success Story 1"
+              loading="lazy"
+            />
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <img
+              src="https://i.postimg.cc/W3qkXsqL/10.jpg"
+              alt="Client Visa Success Story 2"
+              loading="lazy"
+            />
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <img
+              src="https://i.postimg.cc/Hx8yBT8C/11.jpg"
+              alt="Client Visa Success Story 3"
+              loading="lazy"
+            />
+          </div>
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <img
+              src="https://i.postimg.cc/BbW1zRHw/2.jpg"
+              alt="Client Visa Success Story 4"
+              loading="lazy"
+            />
+          </div>
+          <!-- Slide 5 -->
+          <div class="swiper-slide">
+            <img
+              src="https://i.postimg.cc/0QKwc9MZ/3.jpg"
+              alt="Client Visa Success Story 5"
+              loading="lazy"
+            />
+          </div>
+          <!-- Slide 6 -->
+          <div class="swiper-slide">
+            <img
+              src="https://i.postimg.cc/Kz3MJmkp/4.jpg"
+              alt="Client Visa Success Story 6"
+              loading="lazy"
+            />
+          </div>
+          <!-- Slide 7 -->
+          <div class="swiper-slide">
+            <img
+              src="https://i.postimg.cc/MTfQdzMr/5.jpg"
+              alt="Client Visa Success Story 7"
+              loading="lazy"
+            />
+          </div>
+          <!-- Slide 8 -->
+          <div class="swiper-slide">
+            <img
+              src="https://i.postimg.cc/XJBCQnGP/6.jpg"
+              alt="Client Visa Success Story 8"
+              loading="lazy"
+            />
+          </div>
+          <!-- Slide 9 -->
+          <div class="swiper-slide">
+            <img
+              src="https://i.postimg.cc/vBxV3GgN/7.jpg"
+              alt="Client Visa Success Story 9"
+              loading="lazy"
+            />
+          </div>
+          <!-- Slide 10 -->
+          <div class="swiper-slide">
+            <img
+              src="https://i.postimg.cc/Hx8yBTcq/8.jpg"
+              alt="Client Visa Success Story 10"
+              loading="lazy"
+            />
+          </div>
+          <!-- Slide 11 -->
+          <div class="swiper-slide">
+            <img
+              src="https://i.postimg.cc/yd3Zv73q/9.jpg"
+              alt="Client Visa Success Story 11"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev success-prev-reimagined"></div>
+        <div class="swiper-button-next success-next-reimagined"></div>
       </div>
     </section>
-    <!--! Success Stories Section -->
+    <!--! End Success Stories Section - Reimagined -->
+    <!--! End Success Stories Section - Reimagined -->
 
     <!--!Testimonials Section  -->
     <section class="testimonials-section">
@@ -1257,37 +1271,38 @@
     </script>
 
     <!--! New Swiper Initialization Script -->
+    <!--! New Swiper Initialization Script -->
     <script>
-      // Initialize Success Stories Swiper
-      const successSwiper = new Swiper(".success-swiper", {
-        loop: true,
+      // Initialize Reimagined Success Stories Swiper
+      const successSwiperReimagined = new Swiper(".success-swiper-reimagined", {
+        effect: "coverflow",
         grabCursor: true,
-        slidesPerView: 1.5,
-        spaceBetween: 20,
+        centeredSlides: true,
+        loop: true,
+        slidesPerView: "auto",
         autoplay: {
-          delay: 2500,
+          delay: 2500, // Speed up autoplay slightly
           disableOnInteraction: false,
         },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
+        coverflowEffect: {
+          rotate: 0,
+          /* MODIFIED: Reduced stretch for tighter spacing with smaller cards */
+          stretch: 40,
+          depth: 200,
+          modifier: 1,
+          slideShadows: false,
         },
         navigation: {
-          nextEl: ".success-next",
-          prevEl: ".success-prev",
+          nextEl: ".success-next-reimagined",
+          prevEl: ".success-prev-reimagined",
         },
         breakpoints: {
+          // Breakpoints now focus on showing more items
           640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
             slidesPerView: 3,
-            spaceBetween: 30,
           },
           1024: {
-            slidesPerView: 4,
-            spaceBetween: 30,
+            slidesPerView: 5,
           },
         },
       });
